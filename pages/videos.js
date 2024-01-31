@@ -4,7 +4,7 @@ import Videos from "../components/Videos";
 
 export default function projects() {
   return (
-    <ContainerBlock title="Videos - Rajiv Shah">
+    <ContainerBlock title="Videos - Naveen Chatlapalli">
       <Videos />
     </ContainerBlock>
   );

@@ -1,12 +1,12 @@
 const userData = {
-  githubUsername: "manuarora700",
-  name: "Rajiv Shah",
-  designation: "Data Scientist",
+  githubUsername: "ai-fanatic",
+  name: "Naveen Chatlapalli",
+  designation: "Solution Architect",
   avatarUrl: "/avatar.png",
-  email: "rshah@pobox.com",
-  phone: "1-309-310-3622",
-  address: "Illinois, USA",
- upcoming: [
+  email: "naveen.aifanatic@gmail.com",
+  phone: "1-999-999-9999",
+  address: "Texas, USA",
+  upcoming: [
     {
       title: "Making Sense of the Generative AI Explosion",
       date: "Feb 22 2024",
@@ -24,11 +24,12 @@ const userData = {
       date: "May 13-14 2024",
       link: "https://generative-ai-summit.com/",
       imgUrl: "/GOTO2023.png",
-    }
+    },
   ],
   highlight: [
     {
-      title: "Evaluation for Large Language Models and Generative AI - A Deep Dive",
+      title:
+        "Evaluation for Large Language Models and Generative AI - A Deep Dive",
       link: "https://youtu.be/iQl03pQlYWY?si=kvQxuiYzUVDyIuCm",
       imgUrl: "/Evaluation2023.png",
     },
@@ -46,19 +47,20 @@ const userData = {
       title: "Practical AI Podcast: Capabilities of LLMs",
       link: "https://changelog.com/practicalai/219",
       imgUrl: "/PracticalAI2023.png",
-    }
+    },
   ],
   about: {
-    title1: "I help enterprises with the latest AI.",
-    title2: "I keep a side mission of educating folks about AI.",
-    currentPosition: "Machine Learning Engineer at Hugging Face",
-    currentPositiontUrl: "https://hf.co",
+    title1: "I help design automation solutions for enterprises.",
+    title2:
+      "I keep a side mission of simplifying topics about AI + RPA + HABITS + BOOKS.",
+    currentPosition: "Solution Architect at Ashling Partners",
+    currentPositiontUrl: "https://ashlingpartners.com",
   },
   bio: {
     description: [
-      `Rajiv Shah is a machine learning engineer with a passion and expertise in Practical AI. He focuses on enabling enterprise teams to succeed with AI. Rajiv has worked on GTM teams at leading AI companies, including Hugging Face in open-source AI, Snorkel in data-centric AI, and DataRobot in AutoML. He started his career in data science at State Farm and Caterpillar.`,
-      `Rajiv is a widely recognized speaker on AI, published over 20 research papers, been cited over 1000 times, and received over 20 patents. His recent work in AI covers topics such as sports analytics, deep learning, and interpretability.`,  
-      `Rajiv holds a PhD in Communications and a Juris Doctor from the University of Illinois at Urbana Champaign. While earning his degrees, he received a fellowship in Digital Government from the John F. Kennedy School of Government at Harvard University. He has recently started making short videos, @rajistics, with several million views.`
+      `Naveen Chatlapalli is a machine learning engineer with a passion and expertise in Practical AI. He focuses on enabling enterprise teams to succeed with AI. Naveen has worked on GTM teams at leading AI companies, including Hugging Face in open-source AI, Snorkel in data-centric AI, and DataRobot in AutoML. He started his career in data science at State Farm and Caterpillar.`,
+      `Naveen is a widely recognized speaker on AI, published over 20 research papers, been cited over 1000 times, and received over 20 patents. His recent work in AI covers topics such as sports analytics, deep learning, and interpretability.`,
+      `Naveen holds a PhD in Communications and a Juris Doctor from the University of Illinois at Urbana Champaign. While earning his degrees, he received a fellowship in Digital Government from the John F. Kennedy School of Government at Harvard University. He has recently started making short videos, @rajistics, with several million views.`,
     ],
   },
   experience: [
@@ -108,7 +110,7 @@ const userData = {
       title: "Adjunct Assistant Professor",
       company: "University of Illinois at Chicago",
       year: "2005",
-      companyLink: "https://comm.uic.edu/profiles/rajiv-shah/",
+      companyLink: "https://comm.uic.edu/profiles/Naveen-shah/",
       desc: "Long affiliation and conducted research in Chicago",
     },
   ],
@@ -116,44 +118,44 @@ const userData = {
   SSRNUrl: "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=261155",
   GoogleSUrl: "https://scholar.google.com/citations?user=J6N60VcAAAAJ&hl=en",
   MediumUrl: "https://medium.com/@rajistics",
-  BlogUrl: "http://projects.rajivshah.com/blog/",
+  BlogUrl: "http://projects.Naveenshah.com/blog/",
   socialLinks: {
     instagram: "https://instagram.com/rajistics",
-    twitter: "https://twitter.com/rajistics",
-    linkedin: "https://linkedin.com/in/rajistics",
-    github: "https://github.com/rajshah4",
+    twitter: "https://twitter.com/navaifanatic",
+    linkedin: "https://linkedin.com/in/nchatlapalli",
+    github: "https://github.com/ai-fanatic",
     facebook: "https://facebook.com/",
     tiktok: "https://www.tiktok.com/@rajistics",
-    youtube: "https://www.youtube.com/c/Rajistics",
+    youtube: "https://www.youtube.com/@aifanatic",
   },
   blogpost: [
     {
       title: "GPT-4 Loses: Data Labeling with LLMs",
-      date:  "Oct 2023",
+      date: "Oct 2023",
       source: "LinkedIn",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7120746362236792832",
     },
     {
       title: "FinBERT beats GPT-4",
-      date:  "Sep 2023",
+      date: "Sep 2023",
       source: "LinkedIn",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7108090020875444225",
     },
     {
       title: "Lessons earned from Bloomberg GPT",
-      date:  "Aug 2023",
+      date: "Aug 2023",
       source: "LinkedIn",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7089609531961348096",
     },
     {
       title: "FinBERT beats GPT-3",
-      date:  "Feb 2023",
+      date: "Feb 2023",
       source: "LinkedIn",
       link: "https://www.linkedin.com/feed/update/urn:li:activity:7024363501318000640",
     },
     {
       title: "Reasoning in Large Language Models",
-      date:  "Feb 2023",
+      date: "Feb 2023",
       source: "Medium",
       link: "https://medium.com/@rajistics/reasoning-in-large-language-models-2ff33c318a94",
     },
@@ -161,16 +163,17 @@ const userData = {
       title: "Data Science News Sources",
       date: "Dec 2022",
       source: "Medium",
-      link: "https://medium.com/@rajistics/data-science-news-sources-71ad418242b4", 
+      link: "https://medium.com/@rajistics/data-science-news-sources-71ad418242b4",
     },
     {
       title: "Accelerating Document AI",
       date: "Nov 2022",
       source: "Hugging Face",
-      link: "https://huggingface.co/blog/document-ai", 
+      link: "https://huggingface.co/blog/document-ai",
     },
     {
-      title: "Text style transfer in a spreadsheet using Hugging Face Inference Endpoints",
+      title:
+        "Text style transfer in a spreadsheet using Hugging Face Inference Endpoints",
       date: "Nov 2022",
       source: "Medium",
       link: "https://medium.com/@rajistics/text-style-transfer-in-a-spreadsheet-using-hugging-face-inference-endpoints-cc55e4bd58b",
@@ -206,7 +209,8 @@ const userData = {
       link: "https://medium.com/@rajistics/fine-tuning-for-image-classification-using-transformers-7ca01aeb7766",
     },
     {
-      title: "The Art of Sprezzatura for Machine Learning: Building Interpretable Models",
+      title:
+        "The Art of Sprezzatura for Machine Learning: Building Interpretable Models",
       date: "Dec 2021",
       source: "Medium",
       link: "https://towardsdatascience.com/the-art-of-sprezzatura-for-machine-learning-e2494c0db727",
@@ -218,7 +222,8 @@ const userData = {
       link: "https://www.datarobot.com/blog/ai-use-cases-for-cyber-and-malware-analysts/",
     },
     {
-      title: "How MLOps Helps You Dodge The Wrecking Ball of Underspecification",
+      title:
+        "How MLOps Helps You Dodge The Wrecking Ball of Underspecification",
       date: "June 2021",
       source: "DataRobot",
       link: "https://www.datarobot.com/blog/how-mlops-helps-you-dodge-the-wrecking-ball-of-underspecification/",
@@ -230,7 +235,8 @@ const userData = {
       link: "https://www.datarobot.com/blog/running-code-and-failing-models/",
     },
     {
-      title: "Using Feature Importance Rank Ensembling (FIRE) for Advanced Feature Selection",
+      title:
+        "Using Feature Importance Rank Ensembling (FIRE) for Advanced Feature Selection",
       date: "Jan 2021",
       source: "DataRobot",
       link: "https://www.datarobot.com/blog/using-feature-importance-rank-ensembling-fire-for-advanced-feature-selection/",
@@ -260,7 +266,8 @@ const userData = {
       link: "https://www.datarobot.com/blog/ai-in-turbulent-times-navigating-changing-conditions-webinar/",
     },
     {
-      title: "Stand Up for Best Practices: Misuse of Deep Learning in Nature’s Earthquake Aftershock Paper",
+      title:
+        "Stand Up for Best Practices: Misuse of Deep Learning in Nature’s Earthquake Aftershock Paper",
       date: "Jun 2019",
       source: "Medium",
       link: "https://towardsdatascience.com/stand-up-for-best-practices-8a8433d3e0e8",
@@ -272,7 +279,8 @@ const userData = {
       link: "https://www.datarobot.com/blog/using-machine-learning-to-peek-inside-the-minds-of-nfl-coaches/",
     },
     {
-      title: "Taking Fantasy Football Analytics to the Next Level with Automated Machine Learning",
+      title:
+        "Taking Fantasy Football Analytics to the Next Level with Automated Machine Learning",
       date: "Sep 2018",
       source: "DataRobot",
       link: "https://www.datarobot.com/blog/taking-fantasy-football-analytics-to-the-next-level-with-automated-machine-learning/",
@@ -284,7 +292,8 @@ const userData = {
       link: "https://medium.com/@rajistics/optimization-strategies-2fd23afe29f8",
     },
     {
-      title: "Measure Once, Cut Twice: Moving Towards Iteration in Data Science",
+      title:
+        "Measure Once, Cut Twice: Moving Towards Iteration in Data Science",
       date: "Feb 2018",
       source: "DataRobot",
       link: "https://www.datarobot.com/blog/measure-once-cut-twice-moving-towards-iteration-in-data-science/s",
@@ -322,88 +331,95 @@ const userData = {
   ],
   video: [
     {
-      title: "Evaluation for Large Language Models and Generative AI - A Deep Dive",
-      date:  "Nov 2023",
+      title:
+        "Evaluation for Large Language Models and Generative AI - A Deep Dive",
+      date: "Nov 2023",
       source: "Youtube",
       link: "https://youtu.be/iQl03pQlYWY?si=kvQxuiYzUVDyIuCm",
     },
     {
-      title: "NanoGPT using Simpsons Data: Get Started with Large Language Models",
-      date:  "Sep 2023",
+      title:
+        "NanoGPT using Simpsons Data: Get Started with Large Language Models",
+      date: "Sep 2023",
       source: "Youtube",
       link: "https://youtu.be/Ty2_bR1mrBQ",
     },
     {
       title: "16 Challenges for LLMs - Paper Highlights",
-      date:  "Aug 2023",
+      date: "Aug 2023",
       source: "Youtube",
       link: "https://youtu.be/B5MhLSapnms",
     },
     {
       title: "Llama 2 Paper Explained",
-      date:  "July 2023",
+      date: "July 2023",
       source: "Youtube",
       link: "https://youtu.be/idmhH9_H1hY",
     },
     {
-      title: "GPT or BERT? Reviewing the tradeoffs of using Large Language Models versus smaller models",
-      date:  "Jun 2023",
+      title:
+        "GPT or BERT? Reviewing the tradeoffs of using Large Language Models versus smaller models",
+      date: "Jun 2023",
       source: "Youtube",
       link: "https://youtu.be/1Kaj5H_YARg",
     },
     {
-      title: "Building Better Large Language Models - Key Concepts for Prompting and Fine Tuning",
-      date:  "Apr 2023",
+      title:
+        "Building Better Large Language Models - Key Concepts for Prompting and Fine Tuning",
+      date: "Apr 2023",
       source: "Youtube",
       link: "https://youtu.be/NjtKcnLzo3g",
     },
     {
-      title: "Efficient Large Language Model training with LoRA and Hugging Face PEFT",
-      date:  "Mar 2023",
+      title:
+        "Efficient Large Language Model training with LoRA and Hugging Face PEFT",
+      date: "Mar 2023",
       source: "Youtube",
       link: "https://youtu.be/YKCtbIJC3kQ",
     },
     {
-      title: "Text style transfer in a spreadsheet using Hugging Face Inference Endpoints",
+      title:
+        "Text style transfer in a spreadsheet using Hugging Face Inference Endpoints",
       date: "Nov 2022",
       source: "Youtube",
-      link: "https://youtu.be/jA6VDKO7XfA", 
+      link: "https://youtu.be/jA6VDKO7XfA",
     },
     {
       title: "SetFit: Few Shot Learning for Text Classification",
       date: "Oct 2022",
       source: "Youtube",
-      link: "https://youtu.be/ZUK4zR0IeLU", 
+      link: "https://youtu.be/ZUK4zR0IeLU",
     },
     {
-      title: "Prediction Intervals with Conformal Inference: An Intuitive Explanation",
+      title:
+        "Prediction Intervals with Conformal Inference: An Intuitive Explanation",
       date: "Sep 2022",
       source: "Youtube",
-      link: "https://youtu.be/ZUK4zR0IeLU", 
+      link: "https://youtu.be/ZUK4zR0IeLU",
     },
     {
       title: "LayoutLMv3 Training with CORD (receipts dataset)",
       date: "Sep 2022",
       source: "Youtube",
-      link: "https://youtu.be/bsT_1uDRQVo", 
+      link: "https://youtu.be/bsT_1uDRQVo",
     },
     {
       title: "Fine Tuning an Image Classifier on Indian Food Images",
       date: "Aug 2022",
       source: "Youtube",
-      link: "https://youtu.be/j6WbCS0GLuY", 
+      link: "https://youtu.be/j6WbCS0GLuY",
     },
     {
       title: "Explanation Approaches for Transformers",
       date: "Aug 2022",
       source: "Youtube",
-      link: "https://youtu.be/ahgB8c_TgA8", 
-    }
+      link: "https://youtu.be/ahgB8c_TgA8",
+    },
   ],
   talks: [
     {
-      title: "Exploring Language Model Evaluation with Rajiv Shah",
-      date:  "Jan 2024",
+      title: "Exploring Language Model Evaluation with Naveen Chatlapalli",
+      date: "Jan 2024",
       source: "LLM Daily",
       link: "https://www.youtube.com/watch?v=io8FlI-_gOo&ab_channel=LLMDaily",
     },
@@ -411,59 +427,59 @@ const userData = {
       title: "Choosing the Right LLM for Your Organization’s Needs",
       date: "December 2023",
       source: "DataRobot Webinar",
-      link: "https://www.datarobot.com/webinars/choosing-the-best-llm-for-your-organization/", 
+      link: "https://www.datarobot.com/webinars/choosing-the-best-llm-for-your-organization/",
     },
     {
       title: "Constructing an Evaluation Approach for Generative AI Models",
       date: "December 2023",
       source: "Arize AI Holiday Special",
-      link: "https://youtu.be/PtXOQDHPddE?si=PQ4N1B2mX2d_9PwC&t=147", 
+      link: "https://youtu.be/PtXOQDHPddE?si=PQ4N1B2mX2d_9PwC&t=147",
     },
     {
       title: "The Future of Generative AI: Vision and Challenges",
       date: "September 2023",
       source: "Generative AI World Summit",
-      link: "https://www.youtube.com/live/2mvvx9puQ_E?si=REQos2ZRqOY9eCNJ", 
+      link: "https://www.youtube.com/live/2mvvx9puQ_E?si=REQos2ZRqOY9eCNJ",
     },
     {
       title: "How to Leverage Open-Source LLMs in Your Project",
-      date:"August 2023",
+      date: "August 2023",
       source: "Turing Post",
-      link: "https://www.turingpost.com/p/practicalllms"
+      link: "https://www.turingpost.com/p/practicalllms",
     },
     {
       title: "AI Done Right: Practical Applications for IP Professionals",
       date: "July 2023",
       source: "American Bar Association",
-      link: "https://www.americanbar.org/groups/intellectual_property_law/events_cle/other-entity-events/ai-done-right-using-practical-ai-in-ip-law-practice/", 
+      link: "https://www.americanbar.org/groups/intellectual_property_law/events_cle/other-entity-events/ai-done-right-using-practical-ai-in-ip-law-practice/",
     },
     {
       title: "Identifying Useful Large Language Models",
       date: "July 2023",
       source: "Machine Learning for Everyone",
-      link: "https://www.youtube.com/live/_jCBqJYQ9zc?feature=share", 
+      link: "https://www.youtube.com/live/_jCBqJYQ9zc?feature=share",
     },
     {
       title: "Practical Perspective on LLMs",
-      date:  "Jun 2023",
+      date: "Jun 2023",
       source: "Arize AI",
       link: "https://youtu.be/dKBD-3hnjW0",
     },
     {
       title: "Lets Talk AI",
-      date:  "May 2023",
+      date: "May 2023",
       source: "Baptist Health",
       link: "https://baptisthealth.zoom.us/rec/share/gmKZf097DjLnmv98Bg4jTv9WuOyl2yv6CKPiHr7TPy03HFqlr7i2Pa2kWf10el6N.meU20VcGa5JxjPWu?startTime=1685030429000",
     },
     {
       title: "Generative AI tools change the nature of work",
-      date:  "May 2023",
+      date: "May 2023",
       source: "AI4Diversity",
       link: "https://youtu.be/wnKTld4CtR0",
     },
     {
       title: "The Peaks and Pits of Open-Source with Hugging Face",
-      date:  "May 2023",
+      date: "May 2023",
       source: "Analytics India",
       link: "https://analyticsindiamag.com/the-peaks-and-pits-of-open-source-with-hugging-face/",
     },
@@ -471,82 +487,82 @@ const userData = {
       title: "Capabilities of LLMs",
       date: "Apr 2023",
       source: "Practical AI Podcast",
-      link: "https://changelog.com/practicalai/219", 
+      link: "https://changelog.com/practicalai/219",
     },
     {
       title: "Challenges and Opportunities for Keeping AI Open",
       date: "Apr 2023",
       source: "World Summit AI",
-      link: "https://www.youtube.com/watch?v=aR3MvGy1PzM", 
+      link: "https://www.youtube.com/watch?v=aR3MvGy1PzM",
     },
     {
       title: "ChatGPT and the coming Generative AI Revolution",
       date: "Jan 2023",
       source: "DataHour by Analytics Vidhya",
-      link: "https://youtu.be/7zhgYrOQBeE", 
+      link: "https://youtu.be/7zhgYrOQBeE",
     },
     {
       title: "Introduction to programmatic labeling",
       date: "Aug 2022",
       source: "Snorkel AI",
-      link: "https://youtu.be/tvuu5OGyMfE", 
+      link: "https://youtu.be/tvuu5OGyMfE",
     },
     {
       title: "The Mechanics of Data-First AI",
       date: "May 2022",
       source: "EmTech Digital",
-      link: "https://event.technologyreview.com/emtech-digital-2022/speaker/392332/rajiv-shah", 
+      link: "https://event.technologyreview.com/emtech-digital-2022/speaker/392332/Naveen-shah",
     },
     {
       title: "Rules: A Simple & Effective Machine Learning Approach",
       date: "Nov 2021",
       source: "St. Louis Data Science Meetup",
-      link: "https://youtu.be/_Q3q4-UYZkA", 
+      link: "https://youtu.be/_Q3q4-UYZkA",
     },
     {
-      title: "Overcoming Issues with Small Data Sets when Building Machine Learning Models",
+      title:
+        "Overcoming Issues with Small Data Sets when Building Machine Learning Models",
       date: "Dec 2020",
       source: "DataRobot",
-      link: "https://www.youtube.com/watch?v=Ly3ogCE-GuI&t=1591s&ab_channel=DataRobot", 
+      link: "https://www.youtube.com/watch?v=Ly3ogCE-GuI&t=1591s&ab_channel=DataRobot",
     },
     {
       title: "Model Explainability with SHAP in DataRobot",
       date: "Dec 2020",
       source: "DataRobot",
-      link: "https://www.youtube.com/watch?v=O4ZtUcZksQE&t=13s&ab_channel=DataRobot", 
+      link: "https://www.youtube.com/watch?v=O4ZtUcZksQE&t=13s&ab_channel=DataRobot",
     },
     {
       title: "When data leakage turns into a flood of trouble",
       date: "Oct 2020",
       source: "Practical AI Podcast",
-      link: "https://changelog.com/practicalai/109", 
+      link: "https://changelog.com/practicalai/109",
     },
     {
       title: "Model Interpretability",
       date: "Oct 2020",
       source: "AI Skunkworks Northeastern",
-      link: "https://youtu.be/Oh6R47pGTfc", 
+      link: "https://youtu.be/Oh6R47pGTfc",
     },
     {
       title: "COVID-19: Data Science & Expertise",
       date: "Jun 2020",
       source: "GOTO Conference",
-      link: "https://youtu.be/YVv01-f8TZE", 
+      link: "https://youtu.be/YVv01-f8TZE",
     },
     {
       title: "Reproducing Deep Learning Models",
       date: "Oct 2019",
       source: "Data Skeptic",
-      link: "https://dataskeptic.com/blog/episodes/2019/reproducing-deep-learning-models", 
+      link: "https://dataskeptic.com/blog/episodes/2019/reproducing-deep-learning-models",
     },
     {
       title: "Using Interpretability Tools To Improve Your Model",
       date: "Sep 2019",
       source: "Nashville Data Science",
-      link: "https://www.youtube.com/live/syU6ubX9kVM?feature=share", 
-    }
-  ]
+      link: "https://www.youtube.com/live/syU6ubX9kVM?feature=share",
+    },
+  ],
 };
 
 export default userData;
-

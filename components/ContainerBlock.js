@@ -8,7 +8,8 @@ export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
 
   const meta = {
-    title: "Rajiv Shah - Data Scientist, Speaker, Edutainer",
+    title:
+      "Naveen Chatlapalli - Solution Architect, UiPath Community Leader, AI Engineer",
     description: `Welcome to my personal web site to learn more about me, my activities, and my past work.`,
     image: "/avatar.png",
     type: "website",
@@ -29,12 +30,12 @@ export default function ContainerBlock({ children, ...customMeta }) {
           href={`https://yourwebsite.com${router.asPath}`}
         />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Rajiv Shah" />
+        <meta property="og:site_name" content="Naveen Chatlapalli" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@rajistics" />
+        <meta name="twitter:site" content="@navaifanatic" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />

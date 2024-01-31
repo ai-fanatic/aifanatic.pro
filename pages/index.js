@@ -11,7 +11,7 @@ import Highlight from "@components/Highlight";
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Rajiv Shah - Data Scientist, Speaker, Edutainer"
+      title="Naveen Chatlapalli - Solution Architect, UiPath Community Leader, Solopreneur"
       description="Welcome to my personal web site to learn more about me, my activities, and my past work."
     >
       <Hero />

@@ -4,7 +4,7 @@ import Talks from "../components/Talks";
 
 export default function projects() {
   return (
-    <ContainerBlock title="Talks - Rajiv Shah">
+    <ContainerBlock title="Talks - Naveen Chatlapalli">
       <Talks />
     </ContainerBlock>
   );
