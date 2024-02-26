@@ -29,7 +29,7 @@ export default function Bio() {
               </p>
             </div>
             <div className="mt-8">
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
+              {/* <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
                 Academia
               </h1>
               <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
@@ -59,7 +59,7 @@ export default function Bio() {
                   Google Scholar
                 </a>
                 .
-              </p>
+              </p> */}
             </div>
             {/* Social Links */}
             <h1 className="text-xl font-semibold text-gray-700 mt-8 dark:text-gray-200">

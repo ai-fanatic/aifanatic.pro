@@ -26,7 +26,7 @@ export default function AboutMe() {
             </a>
           </p>
         </div>
-        </div>
+      </div>
     </section>
   );
 }
