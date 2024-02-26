@@ -265,7 +265,7 @@ export default function Navbar() {
         >
           Bio
         </Link>
-        <Link
+        {/* <Link
           href="/publications"
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
@@ -282,7 +282,7 @@ export default function Navbar() {
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
           Experience
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
