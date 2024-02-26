@@ -8,46 +8,46 @@ const userData = {
   address: "Texas, USA",
   upcoming: [
     {
-      title: "Making Sense of the Generative AI Explosion",
-      date: "Feb 22 2024",
-      link: "https://rgovys.github.io/",
-      imgUrl: "/Rgov2024.png",
+      title:
+        "🤖 UiPath Clipboard AI: A TIME Magazine Best Invention of 2023 Unveiled 🌟",
+      date: "March 18 2024",
+      link: "https://community.uipath.com/events/details/uipath-dallas-texas-presents-uipath-clipboard-ai-a-time-magazine-best-invention-of-2023-unveiled",
+      imgUrl: "/Mar.jpg",
     },
     {
-      title: "Evaluation for LLMs",
-      date: "April 24 2024",
-      link: "https://datainnovationsummit.com/",
-      imgUrl: "/datainnov2024.png",
+      title: "Exploring UiPath Orchestrator API: Updates and Limits in 2024 🚀",
+      date: "April 15 2024",
+      link: "https://community.uipath.com/events/details/uipath-dallas-texas-presents-exploring-uipath-orchestrator-api-updates-and-limits-in-2024",
+      imgUrl: "/Apr.jpg",
     },
-    {
-      title: "GOTO: Decoding Transfomers with Hugging Face",
-      date: "May 13-14 2024",
-      link: "https://generative-ai-summit.com/",
-      imgUrl: "/GOTO2023.png",
-    },
+    // {
+    //   title: "GOTO: Decoding Transfomers with Hugging Face",
+    //   date: "May 13-14 2024",
+    //   link: "https://generative-ai-summit.com/",
+    //   imgUrl: "/GOTO2023.png",
+    // },
   ],
   highlight: [
     {
-      title:
-        "Evaluation for Large Language Models and Generative AI - A Deep Dive",
-      link: "https://youtu.be/iQl03pQlYWY?si=kvQxuiYzUVDyIuCm",
-      imgUrl: "/Evaluation2023.png",
+      title: "How to become a Solution Architect",
+      link: "https://www.youtube.com/watch?v=8_9e38kElHk",
+      imgUrl: "/HowtobeSA.webp",
     },
     {
-      title: "Arize AI: Evaluation Approach for Generative AI Models",
-      link: "https://youtu.be/PtXOQDHPddE?si=PQ4N1B2mX2d_9PwC&t=147",
-      imgUrl: "/ArizeDec2023.png",
+      title: "UiPath Integration Service",
+      link: "https://www.youtube.com/watch?v=Lu5ooVPEBII&t=1330s",
+      imgUrl: "/IntegrationService.webp",
     },
-    {
-      title: "Exploring Language Model Evaluation",
-      link: "https://www.youtube.com/watch?v=io8FlI-_gOo&ab_channel=LLMDaily",
-      imgUrl: "/LLMDaily_2024.png",
-    },
-    {
-      title: "Practical AI Podcast: Capabilities of LLMs",
-      link: "https://changelog.com/practicalai/219",
-      imgUrl: "/PracticalAI2023.png",
-    },
+    // {
+    //   title: "Exploring Language Model Evaluation",
+    //   link: "https://www.youtube.com/watch?v=io8FlI-_gOo&ab_channel=LLMDaily",
+    //   imgUrl: "/LLMDaily_2024.png",
+    // },
+    // {
+    //   title: "Practical AI Podcast: Capabilities of LLMs",
+    //   link: "https://changelog.com/practicalai/219",
+    //   imgUrl: "/PracticalAI2023.png",
+    // },
   ],
   about: {
     title1: "I help design automation solutions for enterprises.",
@@ -58,9 +58,19 @@ const userData = {
   },
   bio: {
     description: [
-      `Naveen Chatlapalli is a machine learning engineer with a passion and expertise in Practical AI. He focuses on enabling enterprise teams to succeed with AI. Naveen has worked on GTM teams at leading AI companies, including Hugging Face in open-source AI, Snorkel in data-centric AI, and DataRobot in AutoML. He started his career in data science at State Farm and Caterpillar.`,
-      `Naveen is a widely recognized speaker on AI, published over 20 research papers, been cited over 1000 times, and received over 20 patents. His recent work in AI covers topics such as sports analytics, deep learning, and interpretability.`,
-      `Naveen holds a PhD in Communications and a Juris Doctor from the University of Illinois at Urbana Champaign. While earning his degrees, he received a fellowship in Digital Government from the John F. Kennedy School of Government at Harvard University. He has recently started making short videos, @rajistics, with several million views.`,
+      // `Naveen Chatlapalli is a machine learning engineer with a passion and expertise in Practical AI. He focuses on enabling enterprise teams to succeed with AI. Naveen has worked on GTM teams at leading AI companies, including Hugging Face in open-source AI, Snorkel in data-centric AI, and DataRobot in AutoML. He started his career in data science at State Farm and Caterpillar.`,
+      // `Naveen is a widely recognized speaker on AI, published over 20 research papers, been cited over 1000 times, and received over 20 patents. His recent work in AI covers topics such as sports analytics, deep learning, and interpretability.`,
+      // `Naveen holds a PhD in Communications and a Juris Doctor from the University of Illinois at Urbana Champaign. While earning his degrees, he received a fellowship in Digital Government from the John F. Kennedy School of Government at Harvard University. He has recently started making short videos, @navaifanatic, with several million views.`,
+      `Hello! I'm Naveen, a Solution Architect, AI Engineer, and Tech Writer based in Dallas, Texas, USA.`,
+
+      `Education 🎓: I hold a Master's degree in Computer Science from San Francisco Bay University. My educational journey began at Jawaharlal Nehru Technological University, Kakinada, where I developed a solid foundation in technology and innovation.`,
+      `Career 🧑🏼‍💻: After earning my degree in Computer Science, I started my career as a .NET Developer at a startup. It was here that I discovered UiPath and delved into the world of RPA (Robotic Process Automation) technology. My passion and skill in this field led me to win first prize 🏆 in a hackathon, a milestone that marked the beginning of a series of successes.Subsequently, I joined Ashling Partners, a decision that propelled my career forward. Embracing the company's open culture and growth mindset, I quickly advanced from an RPA Developer to Lead RPA Developer. In a short span, I was promoted to Solution Architect, a role in which I thrive by designing innovative solutions and leading projects.`,
+      `In addition to my responsibilities as a Solution Architect, I have a passion for creating software products and writing about AI and ML. My goal is to simplify these complex concepts based on my own experiences and learnings. I also enjoy creating AI art using Stable Diffusion and staying abreast of the latest technological advancements. Furthermore, I lead the UiPath Dallas Chapter, for the Dallas region, conducting virtual and in-person sessions to share the latest developments in the field.
+    
+    `,
+      `As a Solopreneur, I am deeply committed to leveraging my skills to develop useful solutions, including WebApps and Mobile Apps, aimed at solving complex problems. This journey has not only been about creating impactful technology but also about understanding and addressing the real-world needs of people. This aspect of my work reflects my dedication to making technology accessible and beneficial to a wider audience.
+    
+    Take a look at my work below to see what I'm working on, and get in touch if you'd like to work together!`,
     ],
   },
   experience: [
@@ -117,16 +127,17 @@ const userData = {
   resumeUrl: "/CVShah2023.pdf",
   SSRNUrl: "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=261155",
   GoogleSUrl: "https://scholar.google.com/citations?user=J6N60VcAAAAJ&hl=en",
-  MediumUrl: "https://medium.com/@rajistics",
+  MediumUrl: "https://medium.com/@navaifanatic",
   BlogUrl: "http://projects.Naveenshah.com/blog/",
   socialLinks: {
-    instagram: "https://instagram.com/rajistics",
+    instagram: "https://instagram.com/navaifanatic",
     twitter: "https://twitter.com/navaifanatic",
     linkedin: "https://linkedin.com/in/nchatlapalli",
     github: "https://github.com/ai-fanatic",
     facebook: "https://facebook.com/",
-    tiktok: "https://www.tiktok.com/@rajistics",
+    tiktok: "https://topmate.io/aifanatic",
     youtube: "https://www.youtube.com/@aifanatic",
+    topmate: "https://topmate.io/aifanatic",
   },
   blogpost: [
     {
@@ -157,13 +168,13 @@ const userData = {
       title: "Reasoning in Large Language Models",
       date: "Feb 2023",
       source: "Medium",
-      link: "https://medium.com/@rajistics/reasoning-in-large-language-models-2ff33c318a94",
+      link: "https://medium.com/@navaifanatic/reasoning-in-large-language-models-2ff33c318a94",
     },
     {
       title: "Data Science News Sources",
       date: "Dec 2022",
       source: "Medium",
-      link: "https://medium.com/@rajistics/data-science-news-sources-71ad418242b4",
+      link: "https://medium.com/@navaifanatic/data-science-news-sources-71ad418242b4",
     },
     {
       title: "Accelerating Document AI",
@@ -176,37 +187,37 @@ const userData = {
         "Text style transfer in a spreadsheet using Hugging Face Inference Endpoints",
       date: "Nov 2022",
       source: "Medium",
-      link: "https://medium.com/@rajistics/text-style-transfer-in-a-spreadsheet-using-hugging-face-inference-endpoints-cc55e4bd58b",
+      link: "https://medium.com/@navaifanatic/text-style-transfer-in-a-spreadsheet-using-hugging-face-inference-endpoints-cc55e4bd58b",
     },
     {
       title: "Few shot text classification with SetFit",
       date: "Oct 2022",
       source: "Medium",
-      link: "https://medium.com/@rajistics/few-shot-text-classification-with-setfit-63ff7a02da5e",
+      link: "https://medium.com/@navaifanatic/few-shot-text-classification-with-setfit-63ff7a02da5e",
     },
     {
       title: "Getting predictions intervals with conformal inference",
       date: "Sep 2022",
       source: "Medium",
-      link: "https://medium.com/@rajistics/getting-predictions-intervals-with-conformal-inference-caff5be40eff",
+      link: "https://medium.com/@navaifanatic/getting-predictions-intervals-with-conformal-inference-caff5be40eff",
     },
     {
       title: "Explaining predictions from 🤗 transformer models",
       date: "Aug 2022",
       source: "Medium",
-      link: "https://medium.com/@rajistics/explaining-predictions-from-transformer-models-55ab9c6cab24",
+      link: "https://medium.com/@navaifanatic/explaining-predictions-from-transformer-models-55ab9c6cab24",
     },
     {
       title: "Dynamic Adversarial Data Collection",
       date: "Aug 2022",
       source: "Medium",
-      link: "https://medium.com/@rajistics/dynamic-adversarial-data-collection-712df9bac786",
+      link: "https://medium.com/@navaifanatic/dynamic-adversarial-data-collection-712df9bac786",
     },
     {
       title: "Fine-Tuning for Image Classification using Transformers",
       date: "Aug 2022",
       source: "Medium",
-      link: "https://medium.com/@rajistics/fine-tuning-for-image-classification-using-transformers-7ca01aeb7766",
+      link: "https://medium.com/@navaifanatic/fine-tuning-for-image-classification-using-transformers-7ca01aeb7766",
     },
     {
       title:
@@ -289,7 +300,7 @@ const userData = {
       title: "Optimization Strategies",
       date: "July 2018",
       source: "Medium",
-      link: "https://medium.com/@rajistics/optimization-strategies-2fd23afe29f8",
+      link: "https://medium.com/@navaifanatic/optimization-strategies-2fd23afe29f8",
     },
     {
       title:
@@ -302,31 +313,31 @@ const userData = {
       title: "Using Unlabeled Data to Label Data",
       date: "Jan 2018",
       source: "Medium",
-      link: "https://medium.com/@rajistics/using-unlabeled-data-to-label-data-8d8ee8e707ab",
+      link: "https://medium.com/@navaifanatic/using-unlabeled-data-to-label-data-8d8ee8e707ab",
     },
     {
       title: "Using Google’s Quickdraw to create an MNIST style dataset!",
       date: "July 2017",
       source: "Medium",
-      link: "https://medium.com/@rajistics/using-googles-quickdraw-to-create-an-mnist-style-dataset-709c0f99bc65",
+      link: "https://medium.com/@navaifanatic/using-googles-quickdraw-to-create-an-mnist-style-dataset-709c0f99bc65",
     },
     {
       title: "Using xgbfi for revealing feature interactions",
       date: "Aug 2016",
       source: "Medium",
-      link: "https://medium.com/@rajistics/using-xgbfi-for-revealing-feature-interactions-834cb3d33b02",
+      link: "https://medium.com/@navaifanatic/using-xgbfi-for-revealing-feature-interactions-834cb3d33b02",
     },
     {
       title: "Outlier App",
       date: "Jun 2016",
       source: "Medium",
-      link: "https://medium.com/@rajistics/outlier-app-ec01941f36a4",
+      link: "https://medium.com/@navaifanatic/outlier-app-ec01941f36a4",
     },
     {
       title: "SportVu Analysis",
       date: "Apr 2016",
       source: "Medium",
-      link: "https://medium.com/@rajistics/sportvu-analysis-38cdf3e260e1",
+      link: "https://medium.com/@navaifanatic/sportvu-analysis-38cdf3e260e1",
     },
   ],
   video: [
