@@ -9,7 +9,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
 
   const meta = {
     title:
-      "Naveen Chatlapalli - Solution Architect, UiPath Community Leader, AI Engineer",
+      "Naveen Chatlapalli - Solution Architect, UiPath Community Leader, Gen AI Engineer",
     description: `Welcome to my personal web site to learn more about me, my activities, and my past work.`,
     image: "/avatar.png",
     type: "website",
