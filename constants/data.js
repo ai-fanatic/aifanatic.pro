@@ -85,7 +85,7 @@ const userData = {
     {
         title: "Senior Solution Architect",
         company: "Ashling Partners",
-        year: "2018 - Present",
+        year: "2020 - Present",
         companyLink: "https://ashlingpartners.com",
         desc: "Designing innovative solutions using Microsoft and UiPath for enterprise clients. Leading projects, mentoring developers, and supporting production deployments. Promoted from RPA Developer to Lead RPA Developer to Solution Architect.",
     },
@@ -94,7 +94,7 @@ const userData = {
         company: "Process Weaver",
         year: "2016 - 2018",
         companyLink: "https://processweaver.com",
-        desc: "Implemented logistics solutions for major organizations like Disney, IMF, Applied Materials, and more.",
+        desc: "Implemented logistics solutions involving FedEx, UPS, USPS packaging and hazmat handling for major organizations like Genentech, Disney, IMF, Applied Materials, and more.",
     },
     {
         title: "Computer Science Lab Assistant",
@@ -113,7 +113,7 @@ const userData = {
     {
         title: "Vice President of Public Relations",
         company: "Texas Dragon Toastmasters",
-        year: "2024 - Present",
+        year: "2025 - Present",
         companyLink: "https://texasdragon.org/",
         desc: "Promoting the club's activities and events, managing social media presence, and fostering community engagement.",
     },
