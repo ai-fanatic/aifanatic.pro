@@ -18,6 +18,7 @@ export default function Home({ repositories }) {
       <AboutMe />
       <Upcoming />
       <Highlight />
+     
     </ContainerBlock>
   );
 }
