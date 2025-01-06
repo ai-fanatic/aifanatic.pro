@@ -92,7 +92,7 @@ const userData = {
     {
         title: "Developer",
         company: "Process Weaver",
-        year: "2016 - 2018",
+        year: "2016 - 2020",
         companyLink: "https://processweaver.com",
         desc: "Implemented logistics solutions involving FedEx, UPS, USPS packaging and hazmat handling for major organizations like Genentech, Disney, IMF, Applied Materials, and more.",
     },
