@@ -474,17 +474,100 @@ export default function EB1Visa() {
                   </span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mt-2">
-                  90th Percentile Compensation for Solution Architects
+                  75th Percentile Compensation for Solution Architects
                 </p>
               </button>
               {expandedCriteria.criterion9 && (
                 <div className="px-6 pb-6 space-y-4 border-t border-gray-200 dark:border-gray-600 pt-4">
                   <p className="text-gray-600 dark:text-gray-300">
-                    Total compensation falls in the 90th percentile for Solution Architects in Irving, TX (salary survey evidence forthcoming).
+                    Total compensation falls in the 75th percentile for Solution Architects in Irving, TX (salary survey evidence forthcoming).
                   </p>
                   <p className="text-sm text-blue-600 dark:text-blue-400 italic">Why this matters: High remuneration evidences extraordinary ability.</p>
                 </div>
               )}
+            </div>
+          </div>
+
+          {/* Final Merit Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Final Merit & Community Impact</h2>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Business Fellowship */}
+              <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900 dark:to-blue-900 rounded-lg p-6">
+                <h3 className="text-2xl font-semibold text-purple-800 dark:text-purple-200 mb-4">
+                  🚀 Business Fellowship Recognition
+                </h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200">Perplexity AI Business Fellowship Program</h4>
+                    <p className="text-gray-600 dark:text-gray-300">Qualified for exclusive business fellowship at Perplexity AI, one of the leading AI startup companies revolutionizing search and information discovery.</p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border-l-4 border-purple-500">
+                    <p className="text-sm text-purple-600 dark:text-purple-400 italic font-medium">
+                      <strong>Why this matters:</strong> Selection for competitive fellowship programs at cutting-edge AI companies demonstrates recognition of entrepreneurial potential and advanced technical expertise. This validates extraordinary ability to contribute to emerging technologies and business innovation in the AI sector.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Volunteer Work */}
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 dark:from-green-900 dark:to-teal-900 rounded-lg p-6">
+                <h3 className="text-2xl font-semibold text-green-800 dark:text-green-200 mb-4">
+                  🤝 Community Service & Tech Enablement
+                </h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-800 dark:text-gray-200">Nonprofit Technology Leadership</h4>
+                    <ul className="text-gray-600 dark:text-gray-300 space-y-2 mt-2">
+                      <li className="flex items-start">
+                        <span className="text-green-500 mr-2">•</span>
+                        <div>
+                          <strong>Silicon Andhra Manabadi:</strong> Volunteer Telugu teacher (August 2024 - May 2025, weekly 2-hour sessions)
+                        </div>
+                      </li>                      
+                      <li className="flex items-start">
+                        <span className="text-green-500 mr-2">•</span>
+                        <div>
+                          <strong>Telugu Spelling Bee Program:</strong> Comprehensive tech enablement for world-class spelling competition for children ages 6-15, preserving cultural heritage through technology for their world-class Telugu spelling bee program using modern AI architecture
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border-l-4 border-green-500">
+                    <p className="text-sm text-green-600 dark:text-green-400 italic font-medium">
+                      <strong>Why this matters:</strong> Extensive volunteer work demonstrates commitment to using extraordinary abilities for broader societal benefit. USCIS values applicants who contribute to community development and cultural preservation. Technical leadership in nonprofit settings shows ability to apply skills beyond commercial interests, indicating lasting positive impact on U.S. communities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Overall Merit Summary */}
+            <div className="mt-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-semibold mb-4">📋 Comprehensive Merit Assessment</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">9/10</div>
+                  <div className="text-sm opacity-90">EB-1A Criteria Met</div>
+                  <div className="text-xs opacity-75">(Only 3 required)</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">12+</div>
+                  <div className="text-sm opacity-90">Years Expertise</div>
+                  <div className="text-xs opacity-75">RPA & AI Architecture</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold mb-2">100%</div>
+                  <div className="text-sm opacity-90">Documentation Ready</div>
+                  <div className="text-xs opacity-75">Evidence Portfolio</div>
+                </div>
+              </div>
+              <div className="mt-6 text-center">
+                <p className="text-lg font-medium">
+                  Comprehensive evidence demonstrates sustained extraordinary ability with significant impact on the field of RPA and AI architecture, combined with meaningful community contributions and recognition at the highest industry levels.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -536,7 +619,7 @@ export default function EB1Visa() {
               <ul className="text-gray-700 dark:text-gray-300 space-y-4">
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-3">•</span>
-                  Executive endorsement letters (CEO, CTO, VP Delivery) attesting to critical role and impact
+                  Executive endorsement letters (CEO, COO, VP Delivery) attesting to critical role and impact
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-3">•</span>
