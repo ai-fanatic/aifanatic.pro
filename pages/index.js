@@ -16,7 +16,7 @@ export default function Home({ repositories }) {
     >
       <Hero />
       <AboutMe />
-      <Upcoming />
+      {/* <Upcoming /> */}
       <Highlight />
      
     </ContainerBlock>

@@ -7,27 +7,24 @@ const userData = {
   phone: "1-999-999-9999",
   address: "Texas, USA",
   upcoming: [
+    // Upcoming talks section is now hidden - events moved to recent highlights
+  ],
+  highlight: [
     {
-      title:
-        "🤖 UiPath Clipboard AI: A TIME Magazine Best Invention of 2023 Unveiled 🌟",
-      date: "March 18 2024",
+      title: "Create Your First AI Agent with UiPath Agent Builder 🤖",
+      link: "https://community.uipath.com/events/details/uipath-dallas-texas-presents-create-your-first-ai-agent-with-uipath-agent-builder/cohost-dallas-texas",
+      imgUrl: "/AgentBuilder.png",
+    },
+    {
+      title: "🤖 UiPath Clipboard AI: A TIME Magazine Best Invention of 2023 Unveiled 🌟",
       link: "https://community.uipath.com/events/details/uipath-dallas-texas-presents-uipath-clipboard-ai-a-time-magazine-best-invention-of-2023-unveiled",
       imgUrl: "/Mar.jpg",
     },
     {
       title: "Exploring UiPath Orchestrator API: Updates and Limits in 2024 🚀",
-      date: "April 15 2024",
       link: "https://community.uipath.com/events/details/uipath-dallas-texas-presents-exploring-uipath-orchestrator-api-updates-and-limits-in-2024",
       imgUrl: "/Apr.jpg",
     },
-    // {
-    //   title: "GOTO: Decoding Transfomers with Hugging Face",
-    //   date: "May 13-14 2024",
-    //   link: "https://generative-ai-summit.com/",
-    //   imgUrl: "/GOTO2023.png",
-    // },
-  ],
-  highlight: [
     {
       title: "How to become a Solution Architect",
       link: "https://www.youtube.com/watch?v=8_9e38kElHk",
@@ -83,7 +80,7 @@ const userData = {
   },
   experience: [
     {
-        title: "Senior Solution Architect",
+        title: "Solution Architect",
         company: "Ashling Partners",
         year: "2020 - Present",
         companyLink: "https://ashlingpartners.com",
@@ -287,7 +284,7 @@ const userData = {
     },
     {
       title:
-        "Stand Up for Best Practices: Misuse of Deep Learning in Nature’s Earthquake Aftershock Paper",
+        "Stand Up for Best Practices: Misuse of Deep Learning in Nature's Earthquake Aftershock Paper",
       date: "Jun 2019",
       source: "Medium",
       link: "https://towardsdatascience.com/stand-up-for-best-practices-8a8433d3e0e8",
@@ -325,7 +322,7 @@ const userData = {
       link: "https://medium.com/@navaifanatic/using-unlabeled-data-to-label-data-8d8ee8e707ab",
     },
     {
-      title: "Using Google’s Quickdraw to create an MNIST style dataset!",
+      title: "Using Google's Quickdraw to create an MNIST style dataset!",
       date: "July 2017",
       source: "Medium",
       link: "https://medium.com/@navaifanatic/using-googles-quickdraw-to-create-an-mnist-style-dataset-709c0f99bc65",
@@ -444,7 +441,7 @@ const userData = {
       link: "https://www.youtube.com/watch?v=io8FlI-_gOo&ab_channel=LLMDaily",
     },
     {
-      title: "Choosing the Right LLM for Your Organization’s Needs",
+      title: "Choosing the Right LLM for Your Organization's Needs",
       date: "December 2023",
       source: "DataRobot Webinar",
       link: "https://www.datarobot.com/webinars/choosing-the-best-llm-for-your-organization/",
