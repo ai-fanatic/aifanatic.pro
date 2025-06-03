@@ -342,7 +342,7 @@ export default function EB1Visa() {
                   <ul className="text-gray-600 dark:text-gray-300 space-y-2">
                     <li className="flex items-start">
                       <span className="text-green-500 mr-3">•</span>
-                      Invented Unsloth AI documentation agent adopted internally and by external clients
+                      Invented Unsloth AI documentation agent and launched to production which drives 75% of the documentation effort
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-500 mr-3">•</span>
