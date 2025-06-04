@@ -467,14 +467,14 @@ export default function EB1Visa() {
               >
                 <div className="flex justify-between items-center">
                   <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                    Criterion 9 – High Salary ✅
+                    Criterion 9 – High Salary ⚡
                   </h3>
                   <span className="text-2xl text-gray-400">
                     {expandedCriteria.criterion9 ? '−' : '+'}
                   </span>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mt-2">
-                  75th Percentile Compensation for Solution Architects
+                  75th Percentile Compensation - Strong Foundation for Future Growth
                 </p>
               </button>
               {expandedCriteria.criterion9 && (
@@ -482,7 +482,43 @@ export default function EB1Visa() {
                   <p className="text-gray-600 dark:text-gray-300">
                     Total compensation falls in the 75th percentile for Solution Architects in Irving, TX (salary survey evidence forthcoming).
                   </p>
-                  <p className="text-sm text-blue-600 dark:text-blue-400 italic">Why this matters: High remuneration evidences extraordinary ability.</p>
+                  <div className="bg-blue-50 dark:bg-blue-900 rounded-lg p-4">
+                    <p className="text-sm text-blue-600 dark:text-blue-400 italic">
+                      <strong>Current Status:</strong> While not yet meeting the highest salary criterion, the compensation reflects strong market recognition. The EB-1A approval will unlock opportunities for premium roles and consulting engagements, positioning for rapid advancement to top-tier compensation levels. With 8 other criteria already satisfied, this represents an area of future growth rather than a limitation.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Criterion 10 - Commercial Success */}
+            <div className="mb-6 bg-white dark:bg-gray-700 rounded-lg shadow-lg">
+              <button 
+                onClick={() => toggleCriteria('criterion10')}
+                className="w-full p-6 text-left hover:bg-gray-50 dark:hover:bg-gray-600 rounded-lg transition-colors"
+              >
+                <div className="flex justify-between items-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                    Criterion 10 – Commercial Success ⚡
+                  </h3>
+                  <span className="text-2xl text-gray-400">
+                    {expandedCriteria.criterion10 ? '−' : '+'}
+                  </span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 mt-2">
+                  Employee Role - Strategic Platform for Future Ventures
+                </p>
+              </button>
+              {expandedCriteria.criterion10 && (
+                <div className="px-6 pb-6 space-y-4 border-t border-gray-200 dark:border-gray-600 pt-4">
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Currently employed as Solution Architect rather than operating an independent business with documented commercial success.
+                  </p>
+                  <div className="bg-blue-50 dark:bg-blue-900 rounded-lg p-4">
+                    <p className="text-sm text-blue-600 dark:text-blue-400 italic">
+                      <strong>Strategic Positioning:</strong> While not currently qualifying under commercial success, the employee role provides invaluable experience with Fortune 500 clients and cutting-edge AI implementations. The Perplexity AI Business Fellowship qualification demonstrates entrepreneurial recognition and readiness for future commercial ventures. This criterion represents an exciting opportunity for post-EB1A business development rather than a current requirement.
+                    </p>
+                  </div>
                 </div>
               )}
             </div>
