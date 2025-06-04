@@ -584,7 +584,7 @@ export default function EB1Visa() {
               <h3 className="text-2xl font-semibold mb-4">📋 Comprehensive Merit Assessment</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-2">9/10</div>
+                  <div className="text-3xl font-bold mb-2">8/10</div>
                   <div className="text-sm opacity-90">EB-1A Criteria Met</div>
                   <div className="text-xs opacity-75">(Only 3 required)</div>
                 </div>
