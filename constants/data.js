@@ -3,7 +3,7 @@ const userData = {
   name: "Naveen Chatlapalli",
   designation: "Solution Architect",
   avatarUrl: "/avatar.png",
-  email: "naveen.aifanatic@gmail.com",
+  email: "naveen@aifanatic.pro",
   phone: "1-999-999-9999",
   address: "Texas, USA",
   upcoming: [
@@ -580,6 +580,239 @@ const userData = {
       link: "https://www.youtube.com/live/syU6ubX9kVM?feature=share",
     },
   ],
+  solopreneurProjects: [
+    {
+      id: 1,
+      name: "Unsloth",
+      description: "Multimodal documentation agent that transforms raw assets into polished docs & FAQs",
+      tech: "React + Azure Functions, OpenAI; 1st place Ashling Partners challenge",
+      stage: "Live / evolving",
+      category: "AI Documentation",
+      difficulty: "Advanced",
+      impact: "High",
+      url: "unsloth.aifanatic.pro"
+    },
+    {
+      id: 2,
+      name: "Unsloth Chrome Extension",
+      description: "One‑click capture & \"Generate‑Doc\" action that feeds Unsloth",
+      tech: "Browser add‑on (companion)",
+      stage: "MVP in build",
+      category: "Browser Extension",
+      difficulty: "Medium",
+      impact: "Medium",
+      url: "https://chromewebstore.google.com/category/extensions"
+    },
+    {
+      id: 3,
+      name: "TMGenie",
+      description: "Toastmasters club manager—agendas, timing, attendance, history",
+      tech: "React PWA",
+      stage: "Live",
+      category: "Management Tool",
+      difficulty: "Medium",
+      impact: "Medium",
+      url: "tmgenie.aifanatic.pro"
+    },
+    {
+      id: 4,
+      name: "KaryAI",
+      description: "AI‑task manager with smart estimates & Eisenhower analytics",
+      tech: "Next.js, vector search; smartwatch fatigue agent incoming",
+      stage: "Public beta",
+      category: "Productivity",
+      difficulty: "Advanced",
+      impact: "High",
+      url: "karyai.aiconic.one"
+    },
+    {
+      id: 5,
+      name: "AIconic",
+      description: "Startup hub where anyone can spin up a project, track milestones, and turn ideas into shipped products—with AI workflow guidance baked‑in",
+      tech: "Next.js front‑end, Firebase Auth, serverless orchestration, GPT \"coach\" for next‑step advice",
+      stage: "MVP in build",
+      category: "Startup Platform",
+      difficulty: "Expert",
+      impact: "Very High",
+      url: "aiconic.one"
+    },
+    {
+      id: 6,
+      name: "AIconic Internship Platform",
+      description: "Training platform for AIconic interns who will become AI engineers in the future—screen, onboard & monitor 12‑week intensive programs",
+      tech: "Firebase Auth, GDrive video upload",
+      stage: "MVP scaffolding",
+      category: "Education",
+      difficulty: "Advanced",
+      impact: "High",
+      url: "internships.aiconic.one"
+    },
+    {
+      id: 7,
+      name: "DivineRadio",
+      description: "Continuous Hindu devotional radio with lyrics & translation, neatly sorted by deity for spiritual immersion",
+      tech: "Lightweight React PWA",
+      stage: "Live",
+      category: "Entertainment",
+      difficulty: "Easy",
+      impact: "Medium",
+      url: "divineradio.aifanatic.pro"
+    },
+    {
+      id: 8,
+      name: "Amrutham",
+      description: "AI content generator for polished Telugu prose/poetry",
+      tech: "NLP + LLM‑powered",
+      stage: "Alpha",
+      category: "Content Generation",
+      difficulty: "Advanced",
+      impact: "Medium",
+      url: "amrutham.aiconic.one"
+    },
+    {
+      id: 9,
+      name: "LinkHub",
+      description: "Smart link‑in‑bio with AI ordering & engagement analytics",
+      tech: "Next.js, OpenAI, SQLite",
+      stage: "Beta",
+      category: "Social Media",
+      difficulty: "Medium",
+      impact: "Medium",
+      url: "linkhub.aifanatic.pro"
+    },
+    {
+      id: 10,
+      name: "TeluguBadi",
+      description: "Duolingo‑style Telugu learning with AI buddy & pronunciation scoring",
+      tech: "React, spaced‑repetition engine, WebRTC audio",
+      stage: "Alpha",
+      category: "Education",
+      difficulty: "Expert",
+      impact: "High",
+      url: "telugubadi.aiconic.one"
+    },
+    {
+      id: 11,
+      name: "Taste by Varun",
+      description: "Premium Indian catering portal—AI menu builder & order flow",
+      tech: "Next.js, Supabase, Stripe",
+      stage: "Pilot use",
+      category: "E-commerce",
+      difficulty: "Advanced",
+      impact: "Medium",
+      url: "tastebyvarun.aiconic.one"
+    },
+    {
+      id: 12,
+      name: "AgentGate",
+      description: "\"Amazon of AI agents\" marketplace—discover, deploy, pay‑per‑use",
+      tech: "Serverless + billing plug‑ins",
+      stage: "Prototype",
+      category: "AI Marketplace",
+      difficulty: "Expert",
+      impact: "Very High",
+      url: "agentgate.aifanatic.pro"
+    },
+    {
+      id: 13,
+      name: "Ideate",
+      description: "Guided product‑ideation suite (problem → pitch deck)",
+      tech: "React + GPT workflows",
+      stage: "Beta",
+      category: "Business Tools",
+      difficulty: "Advanced",
+      impact: "High",
+      url: "ideate.aifanatic.pro"
+    },
+    {
+      id: 14,
+      name: "Gatherly",
+      description: "AI RSVP manager with no‑show prediction & seating optimisation",
+      tech: "Next.js, ML model, webhooks",
+      stage: "Live",
+      category: "Event Management",
+      difficulty: "Advanced",
+      impact: "Medium",
+      url: "gatherly.aiconic.one"
+    },
+    {
+      id: 15,
+      name: "AgentSight",
+      description: "Converts existing RPA workflows into AI agents in one click",
+      tech: "UiPath API, LangChain, Azure Functions",
+      stage: "Private alpha",
+      category: "Enterprise AI",
+      difficulty: "Expert",
+      impact: "Very High",
+      url: "agentsight.aifanatic.pro"
+    },
+    {
+      id: 16,
+      name: "TeluguMaatlaata",
+      description: "Competitive Telugu word‑game platform for Silicon Andhra championships",
+      tech: "React + Socket.IO real‑time play",
+      stage: "Live (event‑based)",
+      category: "Gaming",
+      difficulty: "Advanced",
+      impact: "Medium",
+      url: "https://nextgen.telugumaatlaata.com/dashboard"
+    },
+    {
+      id: 17,
+      name: "Budjet",
+      description: "Creative personal‑budget tracker that chats with your expenses & predicts cash flow",
+      tech: "Next.js, Plaid API, LLM insights",
+      stage: "Beta",
+      category: "Finance",
+      difficulty: "Advanced",
+      impact: "High",
+      url: "budjet.aifanatic.pro"
+    },
+    {
+      id: 18,
+      name: "RaiseTheFlag",
+      description: "Early‑warning system to stop school drop‑outs; teachers flag & route to counselling",
+      tech: "React, Firebase, analytics dashboard",
+      stage: "Pilot with schools",
+      category: "Social Impact",
+      difficulty: "Advanced",
+      impact: "Very High",
+      url: "raisetheflag.aiconic.one"
+    },
+    {
+      id: 19,
+      name: "HomeCrafters",
+      description: "AI CRM for an architecture firm—keeps clients updated on project progress",
+      tech: "Next.js, image diff & 3‑D previews",
+      stage: "Live (client‑specific)",
+      category: "CRM",
+      difficulty: "Expert",
+      impact: "Medium",
+      url: "homecrafters.aiconic.one"
+    },
+    {
+      id: 20,
+      name: "GC Genius",
+      description: "Mentor platform guiding EB‑1A/O‑1 aspirants through profile‑building",
+      tech: "GPT knowledge base, milestone tracker",
+      stage: "Alpha",
+      category: "Mentoring",
+      difficulty: "Advanced",
+      impact: "High",
+      url: "gcgenius.aiconic.one"
+    },
+    {
+      id: 21,
+      name: "Flow Notes",
+      description: "Speech to Text Conversion Chrome extension that adds notes easily to Notion with seamless workflow integration",
+      tech: "Chrome Extension APIs, Web Speech API, Notion API",
+      stage: "Live",
+      category: "Browser Extension",
+      difficulty: "Advanced",
+      impact: "High",
+      url: "https://chromewebstore.google.com/detail/flow-notes/njgmoefhpkekpkihdlghpjgofnojbfci"
+    }
+  ]
 };
 
 export default userData;

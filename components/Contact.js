@@ -18,7 +18,7 @@ export default function Contact() {
               </h1>
               <p className="font-light text-base text-gray-200 mt-2">
                 Connect with me on LinkedIn, DM me on social media, or drop me
-                an email at naveen.aifanatic@gmail.com
+                an email at naveen@aifanatic.pro
               </p>
 
               <p className="font-light text-base text-gray-200 mt-2">

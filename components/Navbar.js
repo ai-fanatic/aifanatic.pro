@@ -265,6 +265,18 @@ export default function Navbar() {
         >
           Bio
         </Link>
+        <Link
+          href="/experience"
+          className="text-base font-normal text-gray-600 dark:text-gray-300"
+        >
+          Experience
+        </Link>
+        <Link
+          href="/contact"
+          className="text-base font-normal text-gray-600 dark:text-gray-300"
+        >
+          Contact
+        </Link>
         {/* <Link
           href="/publications"
           className="text-base font-normal text-gray-600 dark:text-gray-300"
