@@ -37,6 +37,28 @@ export default function Hero() {
             </h1>
           </RainbowHighlight> */}
         </RoughNotationGroup>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
+          <a
+            href="/contact"
+            className="bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-3 rounded-full font-bold hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
+          >
+            Contact Me
+          </a>
+          <a
+            href="/download"
+            className="bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-3 rounded-full font-bold hover:from-emerald-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
+          >
+            📄 Download Presentation
+          </a>
+          <a
+            href="/about"
+            className="bg-white bg-opacity-20 backdrop-blur-lg px-8 py-3 rounded-full font-bold hover:bg-opacity-30 transition-all border border-white border-opacity-30 text-center"
+          >
+            Learn More
+          </a>
+        </div>
       </div>
       {/* Image container */}
       <div className="hidden lg:block relative w-full md:w-1/2 -mr-40 mt-20">
