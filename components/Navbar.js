@@ -28,42 +28,26 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="space-x-8 hidden md:block">
-          <Link
-            href="/bio"
-            className={`text-base  ${
-              router.asPath === "/bio"
-                ? "text-gray-800 font-bold dark:text-gray-400"
-                : "text-gray-600 dark:text-gray-300 font-normal "
-            }`}
-          >
-            Bio{" "}
-            {router.asPath === "/bio" && (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-down inline-block h-3 w-3"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-                />
-              </svg>
-            )}
+        {/* CTA Button - View EB-1A Evidence (desktop only) */}
+        <div className="hidden lg:block">
+          <Link href="/evidence">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-full hover:from-purple-600 hover:to-blue-600 transition-all shadow-md text-sm">
+              View EB-1A Evidence
+            </button>
           </Link>
-          {/* <Link
-            href="/talks"
+        </div>
+
+        <div className="space-x-4 lg:space-x-6 hidden md:block">
+          <Link
+            href="/evidence"
             className={`text-base  ${
-              router.asPath === "/talks"
+              router.asPath === "/evidence"
                 ? "text-gray-800 font-bold dark:text-gray-400"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
-            Talks
-            {router.asPath === "/talks" && (
+            Evidence
+            {router.asPath === "/evidence" && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -80,15 +64,15 @@ export default function Navbar() {
             )}
           </Link>
           <Link
-            href="/videos"
+            href="/case-studies"
             className={`text-base  ${
-              router.asPath === "/videos"
+              router.asPath === "/case-studies"
                 ? "text-gray-800 font-bold dark:text-gray-400"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
-            Videos
-            {router.asPath === "/videos" && (
+            Case Studies
+            {router.asPath === "/case-studies" && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -103,8 +87,8 @@ export default function Navbar() {
                 />
               </svg>
             )}
-          </Link> */}
-          {/* <Link
+          </Link>
+          <Link
             href="/publications"
             className={`text-base  ${
               router.asPath === "/publications"
@@ -128,17 +112,42 @@ export default function Navbar() {
                 />
               </svg>
             )}
-          </Link> */}
+          </Link>
           <Link
-            href="/experience"
+            href="/talks"
             className={`text-base  ${
-              router.asPath === "/experience"
+              router.asPath === "/talks"
                 ? "text-gray-800 font-bold dark:text-gray-400"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
-            Experience
-            {router.asPath === "/experience" && (
+            Speaking
+            {router.asPath === "/talks" && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-down inline-block h-3 w-3"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+                />
+              </svg>
+            )}
+          </Link>
+          <Link
+            href="/downloads"
+            className={`text-base  ${
+              router.asPath === "/downloads"
+                ? "text-gray-800 font-bold dark:text-gray-400"
+                : "text-gray-600 dark:text-gray-300 font-normal "
+            }`}
+          >
+            Downloads
+            {router.asPath === "/downloads" && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -258,18 +267,36 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-      <div className="space-x-8 block md:hidden mt-4">
+      <div className="space-x-4 block md:hidden mt-4">
         <Link
-          href="/bio"
+          href="/evidence"
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
-          Bio
+          Evidence
         </Link>
         <Link
-          href="/experience"
+          href="/case-studies"
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
-          Experience
+          Cases
+        </Link>
+        <Link
+          href="/publications"
+          className="text-base font-normal text-gray-600 dark:text-gray-300"
+        >
+          Pubs
+        </Link>
+        <Link
+          href="/talks"
+          className="text-base font-normal text-gray-600 dark:text-gray-300"
+        >
+          Speaking
+        </Link>
+        <Link
+          href="/downloads"
+          className="text-base font-normal text-gray-600 dark:text-gray-300"
+        >
+          Downloads
         </Link>
         <Link
           href="/contact"
@@ -277,24 +304,6 @@ export default function Navbar() {
         >
           Contact
         </Link>
-        {/* <Link
-          href="/publications"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
-        >
-          Publications
-        </Link>
-        <Link
-          href="/talks"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
-        >
-          Talks
-        </Link>
-        <Link
-          href="/experience"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
-        >
-          Experience
-        </Link> */}
       </div>
     </div>
   );

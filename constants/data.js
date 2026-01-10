@@ -1,11 +1,11 @@
 const userData = {
   githubUsername: "ai-fanatic",
   name: "Naveen Chatlapalli",
-  designation: "Solution Architect",
+  designation: "Agentic AI Architect | Solution Architect",
   avatarUrl: "/avatar.png",
   email: "naveen@aifanatic.pro",
   phone: "1-999-999-9999",
-  address: "Texas, USA",
+  address: "Dallas, Texas, USA",
   upcoming: [
     // Upcoming talks section is now hidden - events moved to recent highlights
   ],
@@ -55,27 +55,27 @@ const userData = {
   },
   bio: {
     description: [
-      // `Naveen Chatlapalli is a machine learning engineer with a passion and expertise in Practical AI. He focuses on enabling enterprise teams to succeed with AI. Naveen has worked on GTM teams at leading AI companies, including Hugging Face in open-source AI, Snorkel in data-centric AI, and DataRobot in AutoML. He started his career in data science at State Farm and Caterpillar.`,
-      // `Naveen is a widely recognized speaker on AI, published over 20 research papers, been cited over 1000 times, and received over 20 patents. His recent work in AI covers topics such as sports analytics, deep learning, and interpretability.`,
-      // `Naveen holds a PhD in Communications and a Juris Doctor from the University of Illinois at Urbana Champaign. While earning his degrees, he received a fellowship in Digital Government from the John F. Kennedy School of Government at Harvard University. He has recently started making short videos, @navaifanatic, with several million views.`,
-      `Hello! I'm Naveen, a Solution Architect, Gen AI Engineer, and Tech Writer based in Dallas, Texas, USA.`,
+      `Naveen Chatlapalli is an Agentic AI Architect and Solution Architect specializing in enterprise automation and AI systems. Based in Dallas, Texas, he currently serves as Solution Architect at Ashling Partners, where he designs and delivers enterprise-grade automation and agentic AI solutions for Fortune 500 clients.`,
 
-`🎓 Education: I hold a Master's degree in Computer Science from San Francisco Bay University. My educational journey began at Jawaharlal Nehru Technological University, Kakinada, where I developed a solid foundation in technology and innovation.`,
+`🎓 Education: Master's degree in Computer Science from San Francisco Bay University. Bachelor's degree from Jawaharlal Nehru Technological University, Kakinada.`,
 
-`🧑🏼‍💻 Career: After earning my degree in Computer Science, I started my career as a .NET Developer at a startup. It was here that I discovered UiPath and delved into the world of RPA (Robotic Process Automation) technology. My passion and skill in this field led me to win first prize 🏆 in a hackathon, a milestone that marked the beginning of a series of successes. Subsequently, I joined Ashling Partners, a decision that propelled my career forward. Embracing the company's open culture and growth mindset, I quickly advanced from an RPA Developer to Lead RPA Developer. In a short span, I was promoted to Solution Architect, a role in which I thrive by designing innovative solutions and leading projects.`,
+`🧑🏼‍💻 Career Progression: Naveen's career trajectory demonstrates rapid advancement and technical excellence. Starting as a .NET Developer, he discovered his passion for automation technology through UiPath and RPA. His technical skills led to a first-place hackathon victory, marking the beginning of significant achievements. At Ashling Partners, he advanced from RPA Developer to Lead RPA Developer to Solution Architect in a remarkably short period, demonstrating exceptional technical leadership and solution design capabilities.`,
 
-`In addition to my responsibilities as a Solution Architect, I have a passion for creating software products and writing about AI and ML. My goal is to simplify these complex concepts based on my own experiences and learnings. I also enjoy creating AI art using Stable Diffusion and staying abreast of the latest technological advancements. Furthermore, I lead the UiPath Dallas Chapter for the Dallas region, conducting virtual and in-person sessions to share the latest developments in the field.`,
+`🏅 Awards & Recognition: Naveen's contributions have earned significant industry recognition:`,
+`• UiPath Most Valuable Professional (MVP) — 2024: Competitive recognition for thought leadership and technical expertise in automation`,
+`• Top Contributor Award — UiPath Community 2024: Recognition for serving and advancing the global automation community`,
+`• Top 7 Winner — UiPath Specialist Coded Agent Challenge: Global recognition for Risk Orbit, a multi-agent supply chain risk intelligence system`,
+`• Globee® Awards Judge — 2024: Selected as independent judge for Globee Business Awards, demonstrating peer-recognized expertise`,
 
-`🏅 Awards & Recognition: In recognition of my contributions to the RPA community and my expertise in Core Automation and AI, I was honored to receive the UiPath Most Valuable Professional (MVP) award and also the Top Contributor award for serving the Uipath Community for the year 2024. This accolade underscores my commitment to excellence in the field and my dedication to sharing knowledge and fostering innovation.`,
+`👨‍💼 Leadership Roles:`,
+`• UiPath Dallas Chapter Lead: Organizing technical sessions and community events for the Dallas automation community`,
+`• Vice President of Public Relations — Texas Dragon Toastmasters: Leading club communications and public presence`,
 
-`My commitment to the cybersecurity community has also been recognized as I served as an esteemed Judge for the Globee® Awards, evaluating the latest advancements and contributions in cybersecurity. This role allowed me to contribute my expertise and insights to identify and reward excellence in the field.`,
+`💻 Technical Expertise: Specializes in agentic AI architecture, multi-agent orchestration, enterprise automation, and governed AI systems. Proven track record of delivering measurable business outcomes with 80-90% efficiency improvements and multi-million dollar cost savings.`,
 
-`🌟 Volunteering & Leadership: I am passionate about giving back to the community. I volunteer as a Telugu teacher at Silicon Andhra Manabadi, teaching kids about the Telugu language and culture. I also serve as the Vice President of Public Relations for the Texas Dragon Toastmasters club, promoting and elevating the club's activities.`,
+`📚 Community Contributions: Active technical writer and content creator focused on AI, automation, and enterprise solutions. Regular speaker at industry conferences and technical forums, sharing insights on practical AI implementation and automation best practices.`,
 
-`💡 Solopreneurship: As a Solopreneur, I am deeply committed to leveraging my skills to develop useful solutions, including WebApps and Mobile Apps, aimed at solving complex problems. This journey has not only been about creating impactful technology but also about understanding and addressing the real-world needs of people. This aspect of my work reflects my dedication to making technology accessible and beneficial to a wider audience.`,
-
-`Take a look at my work below to see what I'm working on, and get in touch if you'd like to collaborate!`,
-,
+`Explore the evidence of extraordinary ability, case studies, and verified achievements throughout this portfolio.`,
     ],
   },
   experience: [

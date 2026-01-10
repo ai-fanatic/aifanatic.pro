@@ -1,0 +1,114 @@
+[
+  {
+    "category": "Judging",
+    "title": "Globee® Awards — Judge (2024)",
+    "criterion": "Judge of the work of others",
+    "what": "Selected as a judge for Globee Business Awards.",
+    "why": "Independent judging role demonstrating peer-recognized expertise.",
+    "verifiers": [
+      {
+        "label": "Official judges list (Globee site)",
+        "url": "https://globeeawards.com/2024-business-awards-judge/"
+      }
+    ],
+    "artifacts": [
+      "globee-invitation-letter.pdf",
+      "globee-confirmation-email.pdf"
+    ]
+  },
+  {
+    "category": "Original Contributions",
+    "title": "Risk Orbit — Top 7 Winner (UiPath Specialist Coded Agent Challenge)",
+    "criterion": "Original contributions of major significance",
+    "what": "Multi-agent supply chain risk intelligence system recognized as Top 7 winner.",
+    "why": "Competitive global recognition + reusable enterprise agent architecture pattern.",
+    "verifiers": [
+      {
+        "label": "Ashling article referencing Top 7 winner + leadership",
+        "url": "https://ashling.ai/resources/risk-orbit-uipath-coded-agents-meet-real-world-supply-chain-risk"
+      },
+      {
+        "label": "UiPath Forum post (supporting)",
+        "url": "https://forum.uipath.com/t/risk-orbit-uipath-coded-agent-with-langchain-mcp-context-grounding-uipath-sdk-supported/5676124"
+      }
+    ],
+    "artifacts": [
+      "risk-orbit-architecture.png",
+      "risk-orbit-demo.mp4",
+      "risk-orbit-case-study.pdf"
+    ]
+  },
+  {
+    "category": "Awards & Recognition",
+    "title": "UiPath MVP (Most Valuable Professional) — 2024",
+    "criterion": "Prizes or awards for excellence in the field",
+    "what": "UiPath Most Valuable Professional (MVP) award for 2024.",
+    "why": "Competitive recognition for contribution and thought leadership in automation.",
+    "verifiers": [
+      {
+        "label": "UiPath MVP announcement",
+        "url": "https://www.uipath.com/community/mvps"
+      }
+    ],
+    "artifacts": [
+      "uipath-mvp-certificate.pdf",
+      "uipath-mvp-announcement.pdf"
+    ]
+  },
+  {
+    "category": "Leadership Role",
+    "title": "UiPath Dallas Chapter Lead",
+    "criterion": "Leading or critical role for distinguished organization",
+    "what": "Chapter lead for UiPath Dallas community, organizing events and sessions.",
+    "why": "Leadership role serving the automation community in Dallas region.",
+    "verifiers": [
+      {
+        "label": "UiPath Community events",
+        "url": "https://community.uipath.com/events/"
+      }
+    ],
+    "artifacts": [
+      "chapter-lead-appointment.pdf",
+      "event-attendance-metrics.pdf"
+    ]
+  },
+  {
+    "category": "Critical Role",
+    "title": "Solution Architect — Ashling Partners",
+    "criterion": "Leading or critical role for distinguished organization",
+    "what": "Lead design + delivery of enterprise automation and agentic solutions.",
+    "why": "Critical role with measurable outcomes in enterprise automation.",
+    "verifiers": [
+      {
+        "label": "Ashling Partners company page",
+        "url": "https://ashlingpartners.com"
+      }
+    ],
+    "artifacts": [
+      "role-letter.pdf",
+      "project-outcomes.pdf",
+      "client-testimonials.pdf"
+    ]
+  },
+  {
+    "category": "Publications",
+    "title": "Technical Publications and Thought Leadership",
+    "criterion": "Authorship of scholarly articles",
+    "what": "Published technical articles and content on AI, automation, and enterprise solutions.",
+    "why": "Demonstrates thought leadership and contribution to the field through written works.",
+    "verifiers": [
+      {
+        "label": "Medium publications",
+        "url": "https://medium.com/@navaifanatic"
+      },
+      {
+        "label": "LinkedIn articles",
+        "url": "https://linkedin.com/in/nchatlapalli"
+      }
+    ],
+    "artifacts": [
+      "publication-metrics.pdf",
+      "article-citations.pdf"
+    ]
+  }
+]
