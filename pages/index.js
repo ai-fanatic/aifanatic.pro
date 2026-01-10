@@ -11,8 +11,8 @@ import Highlight from "@components/Highlight";
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Naveen Chatlapalli - Solution Architect, UiPath Community Leader, Solopreneur"
-      description="Welcome to my personal web site to learn more about me, my activities, and my past work."
+      title="Naveen Chatlapalli - Agentic AI Architect | UiPath MVP | EB-1A Evidence"
+      description="Agentic AI Architect specializing in enterprise automation and AI agents. UiPath MVP, Globee Awards Judge, Top 7 Winner (Risk Orbit), and Dallas Chapter Leader. View evidence-backed EB-1A extraordinary ability portfolio."
     >
       <Hero />
       <AboutMe />

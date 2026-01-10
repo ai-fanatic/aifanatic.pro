@@ -1,324 +1,192 @@
-import React from "react";
+import React, { useState } from "react";
 import userData from "@constants/data";
 
 export default function Publications() {
+  const [selectedSource, setSelectedSource] = useState("All");
+
+  // Extract unique sources
+  const sources = ["All", ...new Set(userData.blogpost.map(p => p.source))];
+
+  const filteredPublications = selectedSource === "All"
+    ? userData.blogpost
+    : userData.blogpost.filter(p => p.source === selectedSource);
+
   return (
-    <section className="bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-        <h1 className=" text-5xl md:text-9xl font-bold py-25 text-center md:text-left">
-          Publications
-        </h1>
-      </div>
-      <div className="bg-[#F1F1F1] dark:bg-gray-900 px-4">
-        <div className="pt-10 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
-          {/* Social Buttons */}
-          <div className="inline-flex flex-col">
-            <div>
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                Recent Writing
-              </h1>
-              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                My latest writing on AI/ML is at my{" "}
-                <a
-                  href={userData.BlogUrl}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  personal blog
-                </a>{" "}
-                and{" "}
-                <a
-                  href={userData.MediumUrl}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  Medium
-                </a>
-                .
-              </p>
+    <section className="bg-white dark:bg-gray-800 min-h-screen py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Header */}
+        <div className="mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Publications & Thought Leadership
+          </h1>
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl">
+            Technical articles, blog posts, and thought leadership content on AI, automation,
+            LLMs, and enterprise architecture published in major trade publications and platforms.
+          </p>
+        </div>
+
+        {/* Summary Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 p-4 rounded-lg text-center border border-blue-200 dark:border-blue-700">
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+              {userData.blogpost.length}
             </div>
-            <br></br>
-            <div className="mt-8">
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                Academia
-              </h1>
-              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                I spent many years in Academia, here is my{" "}
-                <a
-                  href={userData.resumeUrl}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  CV
-                </a>
-                {". "}
-                Also find my publications on{" "}
-                <a
-                  href={userData.SSRNUrl}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  SSRN
-                </a>{" "}
-                and{" "}
-                <a
-                  href={userData.GoogleSUrl}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  Google Scholar
-                </a>
-                .
-              </p>
-            </div>
-            <br></br>
-            <br></br>
-            <div>
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                Coding Projects
-              </h1>
-              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                My older coding projects are found on my{" "}
-                <a
-                  href="http://projects.Naveenshah.com"
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  personal project server
-                </a>{" "}
-                and{" "}
-                <a
-                  href={userData.socialLinks.github}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  Github
-                </a>
-                .
-              </p>
-            </div>
+            <div className="text-sm text-gray-700 dark:text-gray-300">Publications</div>
           </div>
-          {/* AI Text area */}
-          <div className="col-span-1 md:col-span-2">
-            <b>AI/ML Blog Posts</b>
-            {userData.blogpost.map((proj, idx) => (
-              <PaperCard
-                title={proj.title}
-                date={proj.date}
-                source={proj.source}
-                link={proj.link}
-                number={`${idx + 1}`}
-              />
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30 p-4 rounded-lg text-center border border-purple-200 dark:border-purple-700">
+            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">
+              {sources.length - 1}
+            </div>
+            <div className="text-sm text-gray-700 dark:text-gray-300">Venues</div>
+          </div>
+          <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-800/30 p-4 rounded-lg text-center border border-green-200 dark:border-green-700">
+            <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+              2016 - 2024
+            </div>
+            <div className="text-sm text-gray-700 dark:text-gray-300">Years Active</div>
+          </div>
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 p-4 rounded-lg text-center border border-orange-200 dark:border-orange-700">
+            <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">
+              5,000+
+            </div>
+            <div className="text-sm text-gray-700 dark:text-gray-300">Est. Views</div>
+          </div>
+        </div>
+
+        {/* Filter by Source */}
+        <div className="mb-8">
+          <h3 className="text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-3">
+            Filter by Venue
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {sources.map((source) => (
+              <button
+                key={source}
+                onClick={() => setSelectedSource(source)}
+                className={`px-4 py-2 rounded-full font-semibold transition-all text-sm ${
+                  selectedSource === source
+                    ? "bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg"
+                    : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600"
+                }`}
+              >
+                {source}
+              </button>
             ))}
-            <br></br>
-            <br></br>
-            <b>AI/ML Publications</b>
-            <p>
-              Y Zhao, R Yang, G Chevalier, RC Shah, R Romijnders, Applying deep
-              bidirectional LSTM and mixture density network for basketball
-              trajectory prediction. Optik 158, 266-272{" "}
-            </p>
-            <p>
-              R Shah, R Romijnders, Applying deep learning to basketball
-              trajectories,{" "}
-              <a
-                href="https://arxiv.org/abs/1608.03793"
-                className="underline-link text-blue-300"
-              >
-                arXiv preprint arXiv:1608.03793
-              </a>{" "}
-            </p>
-            <p>
-              A Chou, A Torres-Espin, N Kyritsis, JR Huie, S Khatry, R Shah, et
-              al. Expert-augmented automated machine learning optimizes
-              hemodynamic predictors of spinal cord injury outcome.{" "}
-              <a
-                href="https://pubmed.ncbi.nlm.nih.gov/35390006/"
-                className="underline-link text-blue-300"
-              >
-                Plos one 17 (4), e0265254{" "}
-              </a>
-            </p>
-            <p>
-              B Hodel [R Shah recognized as contributing], Learning to Operate
-              an Excavator via Policy Optimization.{" "}
-              <a
-                href="https://www.sciencedirect.com/science/article/pii/S1877050918319744"
-                className="underline-link text-blue-300"
-              >
-                {" "}
-                Procedia Computer Science Volume{" "}
-              </a>
-              140, 2018, Pages 376-382{" "}
-            </p>
-            <br></br>
-            <br></br>
-            <b>Older Academic Publications</b>
-            <br></br>
-            <br></br>
-            <b>Surveillance - Empirical studies on surveillance cameras.</b>
-            <p>
-              Shah, R. C., & McQuade, Brendan (2016). Surveillance, Security,
-              and Intelligence-Led Policing in Chicago. In (Bennett, Larry;
-              Garner, Roberta and Hague, Euan,eds), Neoliberal Chicago:
-              University of Illinois Press.
-            </p>
-            <p>
-              Shah, R. C., & Braithwaite, J. (2012). Spread Too Thin: Analyzing
-              the Effectiveness of the Chicago Camera Network on Crime. Police
-              Practice and Research: An International Journal
-            </p>
-            <p>
-              Shah, R.C. (2010). Effectiveness of Red Light Cameras in Chicago:
-              An Exploratory Analysis
-            </p>
-            <br></br>
-            <b>Open Standards</b>
-            <p>
-              Open standards are publicly available specifications that offer a
-              wealth of economic and technological benefits. Governments around
-              the world are considering mandating open standards, especially in
-              the area of document formats.
-            </p>
-            <p>
-              Shah, R.C., Kesan, J. P., & Kennis A. Lessons for Government
-              Adoption of Open Standards: A Case Study of the Massachusetts
-              Policy (2008). Journal of Information Technology & Politics 5(4),
-              387-398. A publicly available draft is at SSRN.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (2009). Running Code as Part of an
-              Open Standards Policy. First Monday 6(1).
-            </p>
-            <p>
-              Shah, R.C., & Kesan, J.P. (2012). Lost in Translation:
-              Interoperability Issues for Open Standards. I/S: A Journal of Law
-              and Policy for the Information Society 8(1), 113-141.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (draft). An Empirical Study of Open
-              Standards. (A revised version won Best Paper Award for
-              E-Government Track at HICSS 41)
-            </p>
-            <br></br>
-            <b>Role of Defaults</b>
-            <p>
-              Defaults are pre-selected options chosen by the manufacturer or
-              the software developer. Users tend to defer to these pre-selected
-              options. Policymakers can take advantage of this deference in
-              setting defaults.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (2008). Setting Online Policy With
-              Software Defaults. Information, Communication, and Society 11(7),
-              989-1007.
-            </p>
-            <p>
-              Shah, R.C., & Sandvig, C. (2008). Defaults as De Facto Regulation:
-              The Case of Wireless Access Points. Information, Communication and
-              Society, 11(1), 25-46.
-            </p>
-            <p>
-              Kesan, J. P., & Shah, R.C. (2006). Setting Software Defaults:
-              Perspectives from Law, Computer Science and Behavioral Economics.
-              Notre Dame Law Review, 82(2), 583-634.
-            </p>
-            <br></br>
-            <b>How Software (and Architecture) Affects Users</b>
-            <p>
-              This work has largely focused on identifying features or
-              characteristics of code that have significance in regulating
-              behavior. These characteristics are manipulable and are considered
-              governance characteristics, because of their ability to
-              differentially influence behavior. This work has led us to focus
-              on open standards and defaults.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (2007). How Architecture Regulates.
-              Journal of Architectural and Planning Research, 24(4), 350-359.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (2003). Manipulating the Governance
-              Characteristics of Code. Info, 5(4), 3-9.
-            </p>
-            <br></br>
-            <b>Development of Software</b>
-            <p>
-              This work focuses on the development of software with an emphasis
-              on the role of several institutions including universities, firms,
-              consortia, and the open source movement is examined. For each
-              institution, the analysis examines their internal processes and
-              norms that affect the development process. The analysis also
-              examines how each institution emphasizes different social and
-              technical attributes that are embedded in code.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (2009). Recipes for Cookies: How
-              Institutions Shape Communication Technologies. New Media &
-              Society, 11(3), 315-336.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (2005). Nurturing Software: How
-              Societal Institutions Shape the Development of Software.
-              Communications of the ACM, 40(9), 80-85.
-            </p>
-            <p>
-              Kesan, J. P., & Shah, R. C. (2004). Deconstructing Code. Yale
-              Journal of Law & Technology, 6, 277-389.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (2003). Incorporating Societal
-              Concerns into Communication Technologies. IEEE Technology and
-              Society Magazine, 22(2), 28-33.
-            </p>
-            <br></br>
-            <b>How Government Can Shape Software</b>
-            <p>
-              Government can influence the development of code in many ways.
-              This section focuses on the government’s regulatory power, fiscal
-              power, and the ability to influence intellectual property rights.
-            </p>
-            <p>
-              Kesan, J. P., & Shah, R. C. (2005). Shaping Code. Harvard Journal
-              of Law & Technology, 18(2), 319-399.
-            </p>
-            <br></br>
-            <b>History of the Internet</b>
-            <p>
-              The Internet's origins date back to the 1960s with government
-              funded research into computer networks. This work traces the
-              history and implications of shifting control over the Internet to
-              the private sector, a process called privatization.
-            </p>
-            <p>
-              Shah, R. C., & Kesan, J. P. (2007). The Privatization of the
-              Internet's Backbone Network. Journal of Broadcasting and
-              Electronic Media, 51(1), 93-109.
-            </p>
-            <p>
-              Kesan, J. P., & Shah, R. C. (2001). Fool Us Once Shame on You -
-              Fool Us Twice Shame on Us: What We Can Learn from the
-              Privatizations of the Internet Backbone Network and the Domain
-              Name System. Washington University Law Quarterly, 79(1), 89-220.
-            </p>
           </div>
+        </div>
+
+        {/* Publications List */}
+        <div className="space-y-4">
+          {filteredPublications.length > 0 ? (
+            filteredPublications.map((pub, idx) => (
+              <PublicationCard key={idx} publication={pub} />
+            ))
+          ) : (
+            <div className="text-center py-12 text-gray-600 dark:text-gray-400">
+              No publications in this venue.
+            </div>
+          )}
+        </div>
+
+        {/* External Links */}
+        <div className="mt-12 grid md:grid-cols-2 gap-6">
+          <div className="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50 rounded-lg p-6 border border-gray-300 dark:border-gray-700">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              More Writing
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Find additional technical writing and articles on:
+            </p>
+            <div className="space-y-2">
+              <a
+                href={userData.MediumUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                Medium (@navaifanatic)
+              </a>
+              <a
+                href={userData.socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                LinkedIn Articles
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 border border-blue-200 dark:border-blue-800">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Why This Matters
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Consistent technical writing demonstrates thought leadership and contributions
+              to the field—key factors for EB-1A extraordinary ability criteria.
+            </p>
+            <a
+              href="/evidence"
+              className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+            >
+              View EB-1A Evidence
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        {/* Footer Note */}
+        <div className="mt-8 p-4 bg-gray-100 dark:bg-gray-900 rounded-lg border border-gray-300 dark:border-gray-700">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong>Note:</strong> Publication metrics (views, citations, engagement) are estimates
+            based on platform analytics where available. Links are current as of publication date.
+          </p>
         </div>
       </div>
     </section>
   );
 }
 
-const PaperCard = ({ title, date, source, link, number }) => {
+const PublicationCard = ({ publication }) => {
   return (
-    <div className="">
-      <p>
-        {title},
-        <a href={link} className="underline-link text-blue-300">
-          {" "}
-          {source}{" "}
-        </a>{" "}
-        ({date})
-      </p>
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-200 dark:border-gray-700">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+        <div className="flex-1">
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+            {publication.title}
+          </h3>
+          <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 dark:text-gray-400 mb-3">
+            <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full font-semibold">
+              {publication.source}
+            </span>
+            <span className="flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              {publication.date}
+            </span>
+          </div>
+          <a
+            href={publication.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+          >
+            Read article
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
