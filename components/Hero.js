@@ -13,7 +13,7 @@ export default function Hero() {
         <RoughNotationGroup show={true}>
           <RainbowHighlight color={colors[0]}>
             <h1 className="text-4xl md:text-7xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Solution Architect
+              Agentic AI Architect
             </h1>
           </RainbowHighlight>
           <RainbowHighlight color={colors[1]}>
@@ -91,3 +91,4 @@ export default function Hero() {
     </div>
   );
 }
+

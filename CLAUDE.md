@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This is a **personal portfolio website** built with Next.js for showcasing professional accomplishments, experience, publications, and projects. The current instance is customized for Naveen Chatlapalli, a Solution Architect and Gen AI Engineer based in Dallas, Texas.
+This is a **personal portfolio website** built with Next.js for showcasing professional accomplishments, experience, publications, and projects. The current instance is customized for Naveen Chatlapalli, an Agentic AI Architect and Gen AI Engineer based in Dallas, Texas.
 
 **Key Features:**
 - Portfolio showcase with projects, publications, talks, and videos
@@ -914,3 +914,5 @@ npm start            # Run production server
 **Last Updated:** January 9, 2026
 **Maintainer:** Naveen Chatlapalli
 **AI Assistant:** This document is optimized for Claude and other AI assistants to understand and work with this codebase effectively.
+
+

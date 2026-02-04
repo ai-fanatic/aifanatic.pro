@@ -11,7 +11,7 @@ import Highlight from "@components/Highlight";
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Naveen Chatlapalli - Solution Architect, UiPath Community Leader, Solopreneur"
+      title="Naveen Chatlapalli - Agentic AI Architect, UiPath Community Leader, Solopreneur"
       description="Welcome to my personal web site to learn more about me, my activities, and my past work."
     >
       <Hero />
@@ -35,3 +35,4 @@ export const getServerSideProps = async () => {
     },
   };
 };
+

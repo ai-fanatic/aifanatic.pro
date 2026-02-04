@@ -1,0 +1,35 @@
+[
+  {
+    "type": "Judging",
+    "title": "Globee Awards — Judge (2024)",
+    "summary": "Selected as a judge for Globee Business Awards, evaluating the latest advancements and contributions in cybersecurity.",
+    "links": [
+      {
+        "label": "Official judges list",
+        "url": "https://globeeawards.com/2024-business-awards-judge/"
+      }
+    ],
+    "artifacts": [
+      "/artifacts/globee-confirmation.pdf"
+    ]
+  },
+  {
+    "type": "Recognition",
+    "title": "Risk Orbit — Top 7 Winner (Specialist Coded Agent Challenge)",
+    "summary": "Multi-agent supply chain risk intelligence system recognized as a Top 7 winner in UiPath Specialist Coded Agent Challenge.",
+    "links": [
+      {
+        "label": "Ashling article",
+        "url": "https://ashling.ai/resources/risk-orbit-uipath-coded-agents-meet-real-world-supply-chain-risk"
+      },
+      {
+        "label": "UiPath Forum Discussion",
+        "url": "https://forum.uipath.com/t/risk-orbit-uipath-coded-agent-with-langchain-mcp-context-grounding-uipath-sdk-supported/5676124"
+      }
+    ],
+    "artifacts": [
+      "/artifacts/risk-orbit-case-study.pdf",
+      "/artifacts/risk-orbit-architecture.png"
+    ]
+  }
+]

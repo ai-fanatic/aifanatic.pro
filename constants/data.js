@@ -1,7 +1,7 @@
-const userData = {
+﻿const userData = {
   githubUsername: "ai-fanatic",
   name: "Naveen Chatlapalli",
-  designation: "Solution Architect",
+  designation: "Agentic AI Architect",
   avatarUrl: "/avatar.png",
   email: "naveen@aifanatic.pro",
   phone: "1-999-999-9999",
@@ -26,7 +26,7 @@ const userData = {
       imgUrl: "/Apr.jpg",
     },
     {
-      title: "How to become a Solution Architect",
+      title: "How to become an Agentic AI Architect",
       link: "https://www.youtube.com/watch?v=8_9e38kElHk",
       imgUrl: "/HowtobeSA.webp",
     },
@@ -50,41 +50,26 @@ const userData = {
     title1: "I help design automation solutions for enterprises.",
     title2:
       "I keep a side mission of simplifying topics about AI + AUTOMATION + HABITS + BOOKS.",
-    currentPosition: "Solution Architect at Ashling Partners",
+    currentPosition: "Agentic AI Architect at Ashling Partners",
     currentPositionUrl: "https://ashlingpartners.com",
   },
-  bio: {
+    bio: {
     description: [
-      // `Naveen Chatlapalli is a machine learning engineer with a passion and expertise in Practical AI. He focuses on enabling enterprise teams to succeed with AI. Naveen has worked on GTM teams at leading AI companies, including Hugging Face in open-source AI, Snorkel in data-centric AI, and DataRobot in AutoML. He started his career in data science at State Farm and Caterpillar.`,
-      // `Naveen is a widely recognized speaker on AI, published over 20 research papers, been cited over 1000 times, and received over 20 patents. His recent work in AI covers topics such as sports analytics, deep learning, and interpretability.`,
-      // `Naveen holds a PhD in Communications and a Juris Doctor from the University of Illinois at Urbana Champaign. While earning his degrees, he received a fellowship in Digital Government from the John F. Kennedy School of Government at Harvard University. He has recently started making short videos, @navaifanatic, with several million views.`,
-      `Hello! I'm Naveen, a Solution Architect, Gen AI Engineer, and Tech Writer based in Dallas, Texas, USA.`,
-
-`🎓 Education: I hold a Master's degree in Computer Science from San Francisco Bay University. My educational journey began at Jawaharlal Nehru Technological University, Kakinada, where I developed a solid foundation in technology and innovation.`,
-
-`🧑🏼‍💻 Career: After earning my degree in Computer Science, I started my career as a .NET Developer at a startup. It was here that I discovered UiPath and delved into the world of RPA (Robotic Process Automation) technology. My passion and skill in this field led me to win first prize 🏆 in a hackathon, a milestone that marked the beginning of a series of successes. Subsequently, I joined Ashling Partners, a decision that propelled my career forward. Embracing the company's open culture and growth mindset, I quickly advanced from an RPA Developer to Lead RPA Developer. In a short span, I was promoted to Solution Architect, a role in which I thrive by designing innovative solutions and leading projects.`,
-
-`In addition to my responsibilities as a Solution Architect, I have a passion for creating software products and writing about AI and ML. My goal is to simplify these complex concepts based on my own experiences and learnings. I also enjoy creating AI art using Stable Diffusion and staying abreast of the latest technological advancements. Furthermore, I lead the UiPath Dallas Chapter for the Dallas region, conducting virtual and in-person sessions to share the latest developments in the field.`,
-
-`🏅 Awards & Recognition: In recognition of my contributions to the RPA community and my expertise in Core Automation and AI, I was honored to receive the UiPath Most Valuable Professional (MVP) award and also the Top Contributor award for serving the Uipath Community for the year 2024. This accolade underscores my commitment to excellence in the field and my dedication to sharing knowledge and fostering innovation.`,
-
-`My commitment to the cybersecurity community has also been recognized as I served as an esteemed Judge for the Globee® Awards, evaluating the latest advancements and contributions in cybersecurity. This role allowed me to contribute my expertise and insights to identify and reward excellence in the field.`,
-
-`🌟 Volunteering & Leadership: I am passionate about giving back to the community. I volunteer as a Telugu teacher at Silicon Andhra Manabadi, teaching kids about the Telugu language and culture. I also serve as the Vice President of Public Relations for the Texas Dragon Toastmasters club, promoting and elevating the club's activities.`,
-
-`💡 Solopreneurship: As a Solopreneur, I am deeply committed to leveraging my skills to develop useful solutions, including WebApps and Mobile Apps, aimed at solving complex problems. This journey has not only been about creating impactful technology but also about understanding and addressing the real-world needs of people. This aspect of my work reflects my dedication to making technology accessible and beneficial to a wider audience.`,
-
-`Take a look at my work below to see what I'm working on, and get in touch if you'd like to collaborate!`,
-,
+      "I am Naveen Chatlapalli, an Agentic AI Architect, Gen AI Engineer, and tech writer based in Dallas, Texas. I design automation systems and AI-assisted workflows for enterprise teams.",
+      "Education: M.S. in Computer Science from San Francisco Bay University, with undergraduate studies at Jawaharlal Nehru Technological University, Kakinada.",
+      "Career: Started as a .NET developer, discovered UiPath, won a hackathon, and grew from RPA Developer to Lead RPA Developer to Agentic AI Architect at Ashling Partners.",
+      "Community: 3-time UiPath MVP and Top Contributor (2024). I lead the UiPath Dallas Chapter, serve as VP of PR for Texas Dragon Toastmasters, and volunteer as a Telugu teacher at Silicon Andhra Manabadi.",
+      "Recognition: Globally recognized multi-award judge (Globee Awards, TechX Awards finalist, HackSharks 2.0) and featured in Wired for coverage on AI agent liability.",
+      "Solopreneurship: I build apps and products that make AI and automation accessible, with a focus on practical business outcomes.",
     ],
   },
   experience: [
     {
-        title: "Solution Architect",
+        title: "Agentic AI Architect",
         company: "Ashling Partners",
         year: "2020 - Present",
         companyLink: "https://ashlingpartners.com",
-        desc: "Designing innovative solutions using Microsoft and UiPath for enterprise clients. Leading projects, mentoring developers, and supporting production deployments. Promoted from RPA Developer to Lead RPA Developer to Solution Architect.",
+        desc: "Designing innovative solutions using Microsoft and UiPath for enterprise clients. Leading projects, mentoring developers, and supporting production deployments. Promoted from RPA Developer to Lead RPA Developer to Agentic AI Architect.",
     },
     {
         title: "Developer",
@@ -432,151 +417,24 @@ const userData = {
       link: "https://youtu.be/ahgB8c_TgA8",
     },
   ],
-  talks: [
+    talks: [
     {
-      title: "Exploring Language Model Evaluation with Naveen Chatlapalli",
-      date: "Jan 2024",
-      source: "LLM Daily",
-      link: "https://www.youtube.com/watch?v=io8FlI-_gOo&ab_channel=LLMDaily",
+      title: "Employee onboarding automation",
+      date: "",
+      source: "YouTube",
+      link: "https://www.youtube.com/watch?v=jZW7D4_OdLY",
     },
     {
-      title: "Choosing the Right LLM for Your Organization's Needs",
-      date: "December 2023",
-      source: "DataRobot Webinar",
-      link: "https://www.datarobot.com/webinars/choosing-the-best-llm-for-your-organization/",
+      title: "Building AI Powered Applications with Azure Serverless Functions - Naveen Chatlapalli",
+      date: "",
+      source: "YouTube",
+      link: "https://www.youtube.com/watch?v=I3AYEGNZzZk",
     },
     {
-      title: "Constructing an Evaluation Approach for Generative AI Models",
-      date: "December 2023",
-      source: "Arize AI Holiday Special",
-      link: "https://youtu.be/PtXOQDHPddE?si=PQ4N1B2mX2d_9PwC&t=147",
-    },
-    {
-      title: "The Future of Generative AI: Vision and Challenges",
-      date: "September 2023",
-      source: "Generative AI World Summit",
-      link: "https://www.youtube.com/live/2mvvx9puQ_E?si=REQos2ZRqOY9eCNJ",
-    },
-    {
-      title: "How to Leverage Open-Source LLMs in Your Project",
-      date: "August 2023",
-      source: "Turing Post",
-      link: "https://www.turingpost.com/p/practicalllms",
-    },
-    {
-      title: "AI Done Right: Practical Applications for IP Professionals",
-      date: "July 2023",
-      source: "American Bar Association",
-      link: "https://www.americanbar.org/groups/intellectual_property_law/events_cle/other-entity-events/ai-done-right-using-practical-ai-in-ip-law-practice/",
-    },
-    {
-      title: "Identifying Useful Large Language Models",
-      date: "July 2023",
-      source: "Machine Learning for Everyone",
-      link: "https://www.youtube.com/live/_jCBqJYQ9zc?feature=share",
-    },
-    {
-      title: "Practical Perspective on LLMs",
-      date: "Jun 2023",
-      source: "Arize AI",
-      link: "https://youtu.be/dKBD-3hnjW0",
-    },
-    {
-      title: "Lets Talk AI",
-      date: "May 2023",
-      source: "Baptist Health",
-      link: "https://baptisthealth.zoom.us/rec/share/gmKZf097DjLnmv98Bg4jTv9WuOyl2yv6CKPiHr7TPy03HFqlr7i2Pa2kWf10el6N.meU20VcGa5JxjPWu?startTime=1685030429000",
-    },
-    {
-      title: "Generative AI tools change the nature of work",
-      date: "May 2023",
-      source: "AI4Diversity",
-      link: "https://youtu.be/wnKTld4CtR0",
-    },
-    {
-      title: "The Peaks and Pits of Open-Source with Hugging Face",
-      date: "May 2023",
-      source: "Analytics India",
-      link: "https://analyticsindiamag.com/the-peaks-and-pits-of-open-source-with-hugging-face/",
-    },
-    {
-      title: "Capabilities of LLMs",
-      date: "Apr 2023",
-      source: "Practical AI Podcast",
-      link: "https://changelog.com/practicalai/219",
-    },
-    {
-      title: "Challenges and Opportunities for Keeping AI Open",
-      date: "Apr 2023",
-      source: "World Summit AI",
-      link: "https://www.youtube.com/watch?v=aR3MvGy1PzM",
-    },
-    {
-      title: "ChatGPT and the coming Generative AI Revolution",
-      date: "Jan 2023",
-      source: "DataHour by Analytics Vidhya",
-      link: "https://youtu.be/7zhgYrOQBeE",
-    },
-    {
-      title: "Introduction to programmatic labeling",
-      date: "Aug 2022",
-      source: "Snorkel AI",
-      link: "https://youtu.be/tvuu5OGyMfE",
-    },
-    {
-      title: "The Mechanics of Data-First AI",
-      date: "May 2022",
-      source: "EmTech Digital",
-      link: "https://event.technologyreview.com/emtech-digital-2022/speaker/392332/Naveen-shah",
-    },
-    {
-      title: "Rules: A Simple & Effective Machine Learning Approach",
-      date: "Nov 2021",
-      source: "St. Louis Data Science Meetup",
-      link: "https://youtu.be/_Q3q4-UYZkA",
-    },
-    {
-      title:
-        "Overcoming Issues with Small Data Sets when Building Machine Learning Models",
-      date: "Dec 2020",
-      source: "DataRobot",
-      link: "https://www.youtube.com/watch?v=Ly3ogCE-GuI&t=1591s&ab_channel=DataRobot",
-    },
-    {
-      title: "Model Explainability with SHAP in DataRobot",
-      date: "Dec 2020",
-      source: "DataRobot",
-      link: "https://www.youtube.com/watch?v=O4ZtUcZksQE&t=13s&ab_channel=DataRobot",
-    },
-    {
-      title: "When data leakage turns into a flood of trouble",
-      date: "Oct 2020",
-      source: "Practical AI Podcast",
-      link: "https://changelog.com/practicalai/109",
-    },
-    {
-      title: "Model Interpretability",
-      date: "Oct 2020",
-      source: "AI Skunkworks Northeastern",
-      link: "https://youtu.be/Oh6R47pGTfc",
-    },
-    {
-      title: "COVID-19: Data Science & Expertise",
-      date: "Jun 2020",
-      source: "GOTO Conference",
-      link: "https://youtu.be/YVv01-f8TZE",
-    },
-    {
-      title: "Reproducing Deep Learning Models",
-      date: "Oct 2019",
-      source: "Data Skeptic",
-      link: "https://dataskeptic.com/blog/episodes/2019/reproducing-deep-learning-models",
-    },
-    {
-      title: "Using Interpretability Tools To Improve Your Model",
-      date: "Sep 2019",
-      source: "Nashville Data Science",
-      link: "https://www.youtube.com/live/syU6ubX9kVM?feature=share",
+      title: "Building AI-Powered Applications with Azure Serverless Functions and C# .NET - Naveen Chatlapalli",
+      date: "",
+      source: "YouTube",
+      link: "https://www.youtube.com/watch?v=rq4y7Jnelac",
     },
   ],
   solopreneurProjects: [
@@ -813,6 +671,34 @@ const userData = {
     }
   ],
   blogs: [
+    {
+      slug: "agentic-automation-patient-scheduling",
+      title: "Unlocking Smarter Healthcare: How Agentic Automation Transforms Patient Scheduling",
+      excerpt: "A summary of my Ashling article on how agentic automation improves patient scheduling and access.",
+      date: "February 4, 2026",
+      category: "Healthcare Automation",
+      tags: ["Healthcare", "AgenticAI", "Automation", "Scheduling"],
+      content: `
+        <p class="lead">This post is a brief summary of my Ashling article on how agentic automation can transform patient scheduling. For the full piece, read it on Ashling site.</p>
+        
+        <p><a href="https://ashling.ai/resources/unlocking-smarter-healthcare-how-agentic-automation-transforms-patient-scheduling" target="_blank" rel="noopener noreferrer">Read the full article on Ashling.</a></p>
+        
+        <h2>Why scheduling breaks</h2>
+        <p>Manual handoffs, fragmented data, and high call volumes create delays, no-shows, and a poor patient experience.</p>
+        
+        <h2>What agentic automation changes</h2>
+        <ul>
+          <li>Understands intent across calls, chat, and forms</li>
+          <li>Coordinates availability and rules in real time</li>
+          <li>Escalates edge cases to humans with context</li>
+        </ul>
+        
+        <h2>Outcome</h2>
+        <div class="result-box">
+          Faster scheduling, fewer errors, and a smoother patient journey.
+        </div>
+      `
+    },
     {
       slug: "agent-patterns-that-work",
       title: "The 5 Agent Patterns That Actually Work in Production",
@@ -1218,3 +1104,5 @@ except RateLimitError:
 };
 
 export default userData;
+
+

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const fontOptions = [
   { label: "Inter", value: "inter" },
   { label: "Source Sans Pro", value: "source-sans" },
-  { label: "OpenDyslexic", value: "dyslexic" },
   { label: "System UI", value: "system" },
 ];
 

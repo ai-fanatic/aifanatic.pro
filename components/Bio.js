@@ -2,145 +2,201 @@ import React from "react";
 import userData from "@constants/data";
 
 export default function Bio() {
+  const focusAreas = [
+    "Enterprise automation and Agentic AI Architecture",
+    "Agentic AI systems and LLM workflows",
+    "UiPath ecosystem strategy and delivery",
+    "Tech writing and community education",
+  ];
+
+  const recognitionLinks = [
+    {
+      label: "Wired feature on AI agent liability",
+      url: "https://www.wired.com/story/ai-agents-legal-liability-issues/",
+    },
+    {
+      label: "TechX Awards finalist (AI Innovation Award)",
+      url: "https://www.chattanoogapulse.com/local-news/business-news/chatech-announces-finalists-for-the-6th-annual-techx-awards/",
+    },
+  ];
+
   return (
     <section className="bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-32 bg-white dark:bg-gray-800">
-        <h1 className=" text-5xl md:text-6xl font-bold py-12 text-center md:text-left">
+      <div className="max-w-6xl mx-auto px-4 pt-12 pb-6">
+        <p className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400">
           Biography
+        </p>
+        <h1 className="mt-3 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl">
+          About Naveen
         </h1>
+        <p className="mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+          Agentic AI Architect, Gen AI Engineer, and tech writer focused on building
+          practical automation systems for enterprise teams.
+        </p>
       </div>
-      <div className="bg-[#F1F1F1] dark:bg-gray-900 px-4">
-        <div className="pt-12 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-12 gap-x-12">
-          {/* Social Buttons */}
-          <div className="inline-flex flex-col">
-            <div>
-              <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                Contact
-              </h1>
-              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                For any sort inquiry / help, send me a{" "}
-                <a
-                  href={`mailto:${userData.email}`}
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  email
-                </a>{" "}
-                and I'll get back soon.
-              </p>
-            </div>
-            <div className="mt-8">
-              {/* <h1 className="text-xl font-semibold text-gray-700 dark:text-gray-200">
-                Academia
-              </h1>
-              <p className="text-lg text-gray-500 mt-4 dark:text-gray-300">
-                I spent many years in Academia, here is my{" "}
-                <a
-                  href={userData.resumeUrl}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  CV
-                </a>
-                {". "}
-                Also find my publications on{" "}
-                <a
-                  href={userData.SSRNUrl}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  SSRN
-                </a>{" "}
-                and{" "}
-                <a
-                  href={userData.GoogleSUrl}
-                  target="__blank"
-                  className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
-                >
-                  Google Scholar
-                </a>
-                .
-              </p> */}
-            </div>
-            {/* Social Links */}
-            <h1 className="text-xl font-semibold text-gray-700 mt-8 dark:text-gray-200">
-              Social Links
-            </h1>
-            <div className="mt-4 ml-4">
-              <div className="flex flex-row justify-start items-center ">
-                <a
-                  href={userData.socialLinks.tiktok}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    Topmate
+
+      <div className="bg-[#F1F1F1] dark:bg-gray-900">
+        <div className="max-w-6xl mx-auto px-4 pb-16">
+          <div className="grid gap-8 lg:grid-cols-[320px_1fr]">
+            <aside className="space-y-6">
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  At a glance
+                </h2>
+                <div className="mt-4 space-y-4 text-sm text-gray-600 dark:text-gray-300">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+                      Role
+                    </p>
+                    <p className="font-semibold text-gray-800 dark:text-gray-100">
+                      {userData.designation}
+                    </p>
                   </div>
-                </a>
-              </div>
-              <div className="flex flex-row justify-start items-center">
-                <a
-                  href={userData.socialLinks.twitter}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    Twitter
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+                      Location
+                    </p>
+                    <p className="font-semibold text-gray-800 dark:text-gray-100">
+                      {userData.address}
+                    </p>
                   </div>
-                </a>
-              </div>
-              <div className="flex flex-row justify-start items-center">
-                <a
-                  href={userData.socialLinks.github}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
-                    GitHub
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+                      Current
+                    </p>
+                    <a
+                      href={userData.about.currentPositionUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-gray-800 hover:text-blue-600 dark:text-gray-100 dark:hover:text-blue-400"
+                    >
+                      {userData.about.currentPosition}
+                    </a>
                   </div>
-                </a>
+                </div>
+                <div className="mt-6 flex flex-col gap-3">
+                  <a
+                    href={`mailto:${userData.email}`}
+                    className="inline-flex items-center justify-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow transition hover:-translate-y-0.5 hover:bg-slate-800"
+                  >
+                    Email me
+                  </a>
+                  <a
+                    href={userData.socialLinks.topmate}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-full border border-gray-200 px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm transition hover:border-gray-300 hover:text-blue-600 dark:border-gray-700 dark:text-gray-200 dark:hover:text-blue-400"
+                  >
+                    Book time
+                  </a>
+                </div>
               </div>
-              <div className="flex flex-row justify-start items-center">
-                <a
-                  href={userData.socialLinks.linkedin}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-24 group-hover:translate-x-0 transition duration-300"></div>
+
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Links
+                </h2>
+                <div className="mt-4 grid gap-2">
+                  <a
+                    href={userData.socialLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-700 hover:border-blue-300 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:text-blue-400"
+                  >
                     LinkedIn
-                  </div>
-                </a>
-              </div>
-              <div className="flex flex-row justify-start items-center">
-                <a
-                  href={userData.socialLinks.youtube}
-                  className="flex flex-row items-center space-x-4 group"
-                >
-                  <div className="my-4">&rarr;</div>
-                  <div className="text-lg text-gray-500 font-mono relative overflow-hidden dark:text-gray-300">
-                    <div className="absolute h-0.5 w-full bg-gray-400 bottom-0 transform -translate-x-28 group-hover:translate-x-0 transition duration-300"></div>
+                    <span className="text-xs text-gray-400">Connect</span>
+                  </a>
+                  <a
+                    href={userData.socialLinks.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-700 hover:border-blue-300 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:text-blue-400"
+                  >
+                    GitHub
+                    <span className="text-xs text-gray-400">Code</span>
+                  </a>
+                  <a
+                    href={userData.socialLinks.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-700 hover:border-blue-300 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:text-blue-400"
+                  >
                     YouTube
-                  </div>
-                </a>
+                    <span className="text-xs text-gray-400">Videos</span>
+                  </a>
+                  <a
+                    href={userData.socialLinks.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-700 hover:border-blue-300 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:text-blue-400"
+                  >
+                    Twitter
+                    <span className="text-xs text-gray-400">Updates</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Focus areas
+                </h2>
+                <ul className="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  {focusAreas.map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-blue-500" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Recognition
+                </h2>
+                <div className="mt-4 grid gap-2">
+                  {recognitionLinks.map((item) => (
+                    <a
+                      key={item.url}
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm font-medium text-gray-700 hover:border-blue-300 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:text-blue-400"
+                    >
+                      {item.label}
+                      <span className="text-xs text-gray-400">Read</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </aside>
+
+            <div className="space-y-6">
+              <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Overview
+                </h2>
+                <div className="mt-4 space-y-4 text-base leading-relaxed text-gray-600 dark:text-gray-300">
+                  {userData.bio.description?.map((desc, idx) => (
+                    <p key={idx}>{desc}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Collaboration
+                </h2>
+                <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">
+                  Interested in enterprise automation, AI adoption, or technical
+                  writing support? Reach out and I will respond quickly.
+                </p>
               </div>
             </div>
-          </div>
-          {/* Text area */}
-          <div className="col-span-1 md:col-span-2">
-            {userData.bio.description?.map((desc, idx) => (
-              <p
-                key={idx}
-                className="text-xl text-gray-700 mb-4 dark:text-gray-300 "
-              >
-                {desc}
-              </p>
-            ))}
           </div>
         </div>
       </div>
     </section>
   );
 }
+
