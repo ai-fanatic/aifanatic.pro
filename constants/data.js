@@ -1214,9 +1214,6 @@ except RateLimitError:
           <strong>Start simple. Measure everything. Iterate relentlessly.</strong>
         </div>
       `
-
-        <p><strong>Start simple. Measure everything. Iterate relentlessly.</strong></p>
-      `
     }
   ]
 };
