@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ContainerBlock from "@components/ContainerBlock";
-import { userData } from "@constants/data";
+import userData from "@constants/data";
 
 export default function BlogPost() {
   const router = useRouter();

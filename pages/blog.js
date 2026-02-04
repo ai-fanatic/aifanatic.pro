@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import ContainerBlock from "@components/ContainerBlock";
-import { userData } from "@constants/data";
+import userData from "@constants/data";
 
 export default function Blog() {
   return (
