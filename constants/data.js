@@ -812,6 +812,163 @@ const userData = {
       impact: "High",
       url: "https://chromewebstore.google.com/detail/flow-notes/njgmoefhpkekpkihdlghpjgofnojbfci"
     }
+  ],
+  blogs: [
+    {
+      slug: "agent-patterns-that-work",
+      title: "The 5 Agent Patterns That Actually Work in Production",
+      excerpt: "What Anthropic learned from building agents with dozens of enterprise teams — and the composable patterns you can use today.",
+      date: "February 4, 2026",
+      category: "AI Engineering",
+      tags: ["AgenticAI", "LLM", "ProductionML", "Anthropic"],
+      content: `
+        <p>I've spent the last year watching enterprise teams ship (and fail to ship) AI agents. The pattern is predictable: start with LangChain, hit a wall, rip it out, rebuild with raw APIs.</p>
+
+        <p>Anthropic's recent engineering post validates what I've seen in the field. After working with dozens of teams building production agents, they identified five composable patterns that actually work. No frameworks. No magic. Just patterns.</p>
+
+        <h2>Pattern 1: Prompt Chaining</h2>
+        <p><strong>When the task decomposes cleanly into fixed steps.</strong></p>
+        <p>Break a task into sequential LLM calls, where each step processes the output of the previous one. Add programmatic "gates" between steps to verify progress.</p>
+
+        <p><strong>Real example:</strong> I built a compliance document generator for a healthcare client. The flow: generate outline → gate check → expand content → gate check → format document. Each step is a separate LLM call. If a gate fails, we retry that step with feedback. Result: 94% accuracy (vs. 67% with a single prompt) at ~8 seconds latency.</p>
+
+        <p><em>The trap:</em> Don't chain just because you can. If steps aren't truly dependent, you're adding latency for no benefit.</p>
+
+        <h2>Pattern 2: Routing</h2>
+        <p><strong>When inputs need different handling strategies.</strong></p>
+        <p>A classifier routes inputs to specialized downstream handlers. This works well when you have clear input categories with different requirements.</p>
+
+        <p><strong>Real example:</strong> Customer support ticket routing. Simple questions go to Claude Haiku for fast, cheap responses. Complex technical issues go to Claude Sonnet with debugging tools. Refund requests escalate to humans. Result: 60% of tickets now handled by Haiku at 1/10th the cost.</p>
+
+        <p><em>Key insight:</em> Your router doesn't need to be perfect. A "confident" wrong route beats a hesitant correct one — you can always escalate.</p>
+
+        <h2>Pattern 3: Parallelization</h2>
+        <p><strong>When you need speed or multiple perspectives.</strong></p>
+        <p>Two variants: <strong>Sectioning</strong> (break into independent subtasks, run in parallel) and <strong>Voting</strong> (run same task multiple times, aggregate results).</p>
+
+        <p><strong>Real example — Sectioning:</strong> Financial advice agent with safety guardrails. Parallel Call 1 generates response to user query. Parallel Call 2 screens for disallowed content. Both run simultaneously. If Call 2 flags anything, we block the response. Latency increase: only ~200ms.</p>
+
+        <p><strong>Real example — Voting:</strong> Code security scanner. Run 3 different SQL injection checks with different prompt angles. Flag if 2+ runs agree. Cost: 3x. Value: Prevents the one exploit that gets through.</p>
+
+        <h2>Pattern 4: Orchestrator-Workers</h2>
+        <p><strong>When you can't predict the subtasks upfront.</strong></p>
+        <p>A central "orchestrator" LLM dynamically breaks down tasks, delegates to worker LLMs, and synthesizes results. Workers aren't predefined — the orchestrator decides what's needed based on the specific input.</p>
+
+        <p><strong>Real example:</strong> Codebase migration tool that needed to update API calls across 50+ files. The orchestrator scans the repository, identifies files with Stripe imports, then delegates to workers for each file (read, identify patterns, generate replacements, write changes). Finally verifies compilation and runs tests.</p>
+
+        <p><em>The risk:</em> This is the most complex pattern. Start with simpler approaches and graduate here only when you genuinely can't predict the workflow.</p>
+
+        <h2>Pattern 5: Evaluator-Optimizer</h2>
+        <p><strong>When iterative refinement provides measurable value.</strong></p>
+        <p>One LLM generates, another evaluates, in a loop. Continue until quality threshold met or max iterations reached.</p>
+
+        <p><strong>Real example:</strong> Marketing copy generation. Generate headline options → evaluate on brand voice, clarity, CTA strength → if score < 8/10, provide specific feedback and regenerate. Repeat up to 3 iterations.</p>
+
+        <p><em>The metric that matters:</em> If you can't define "better" quantitatively, this pattern won't help. You need evaluation criteria sharper than "make it good."</p>
+
+        <h2>The Meta-Pattern: Start Simple</h2>
+        <p>Anthropic's core advice (and mine): Begin with a single LLM call. Add retrieval. Add in-context examples. Only when that fails, add one of these patterns. And only when that fails, consider full agents.</p>
+
+        <p>Instrument everything from day one. You can't improve what you don't measure. Every pattern should have latency tracking, success/failure rates, cost per task, and human validation samples.</p>
+
+        <h2>Frameworks: Use With Eyes Open</h2>
+        <p>LangChain, CrewAI, LlamaIndex — they make demos fast. But successful production teams often <strong>reduce</strong> abstraction, not add it.</p>
+
+        <p>My rule: Use a framework for the 20% of boilerplate it handles well (tool calling, retries, parsing). Build the 80% that's unique to your problem yourself. You'll debug faster and understand your system.</p>
+
+        <h2>Bottom Line</h2>
+        <p>Agents aren't magic. They're software with more moving parts. These five patterns are composable building blocks — mix, match, customize for your use case.</p>
+
+        <p>The teams shipping production agents aren't the ones with the fanciest architectures. They're the ones that <strong>measure, iterate, and resist complexity until it's justified.</strong></p>
+      `
+    },
+    {
+      slug: "uipath-agents-best-practices",
+      title: "UiPath Agents Best Practices: A Complete Guide",
+      excerpt: "Lessons from shipping enterprise-grade AI agents at scale with UiPath Agents.",
+      date: "February 4, 2026",
+      category: "RPA & Automation",
+      tags: ["UiPath", "AgenticAI", "RPA", "EnterpriseAutomation"],
+      content: `
+        <p>I've spent the last 18 months building UiPath Agents for enterprise clients — from quick POCs to production systems handling thousands of daily interactions. Along the way, I've learned what works, what breaks, and what separates demo-worthy experiments from systems that actually deliver business value.</p>
+
+        <p>UiPath Agents represent a significant shift in how we think about automation. Unlike traditional RPA bots that follow rigid, pre-defined workflows, Agents leverage large language models to understand context, make decisions, and take actions dynamically.</p>
+
+        <h2>1. Design Your Agent's "Personality" Deliberately</h2>
+        <p>Your Agent isn't just a tool — it's a digital employee representing your brand. Define clear behavioral guidelines:</p>
+        <ul>
+          <li>How formal or casual should the Agent be?</li>
+          <li>Should it apologize when it makes mistakes, or simply correct them?</li>
+          <li>What tone is appropriate for your industry?</li>
+        </ul>
+
+        <p>I document this in a "Persona Specification" alongside technical docs. For a healthcare client: "Professional but warm. Never make medical claims. Always defer to human providers for clinical decisions."</p>
+
+        <h2>2. Master the Context Window</h2>
+        <p>Context isn't free — every token costs latency and money. The art is providing exactly what the Agent needs, nothing more.</p>
+
+        <p><strong>Best practices:</strong></p>
+        <ul>
+          <li>Full context for the last 5 turns</li>
+          <li>Summarized context for earlier conversation</li>
+          <li>Key facts extracted and stored separately</li>
+        </ul>
+
+        <p><strong>Real-world impact:</strong> One client's Agent consumed 8,000 tokens per request. After optimizing context management: 2,500 tokens — <strong>cutting costs by 70%</strong> and improving response times by 40%.</p>
+
+        <h2>3. Build Robust Tool Design</h2>
+        <p>Tools are how your Agent interacts with the world. Poorly designed tools are the #1 source of Agent failures in production.</p>
+
+        <p><strong>Naming:</strong> Prefer <code>get_customer_order_history</code> over <code>query_database_table_orders</code>.</p>
+
+        <p><strong>Error handling:</strong> Every tool call can fail. Build retry logic and graceful degradation:</p>
+
+        <pre><code>try:
+    result = create_ticket(user_id, description)
+    return {"success": True, "ticket_id": result.id}
+except InsufficientPermissionsError:
+    return {"success": False, "error": "I don't have permission..."}
+except RateLimitError:
+    return {"success": False, "error": "I'm experiencing high traffic..."}</code></pre>
+
+        <h2>4. Implement Human-in-the-Loop Smartly</h2>
+        <p>The goal is strategic human involvement — only when necessary, but always when critical.</p>
+
+        <p><strong>Escalation criteria:</strong></p>
+        <ul>
+          <li>High-stakes decisions (cancellations, refunds over $X)</li>
+          <li>Situations requiring empathy</li>
+          <li>Edge cases the Agent hasn't been trained on</li>
+          <li>User explicitly requests a human</li>
+        </ul>
+
+        <p>When escalating, the Agent should acknowledge the handoff, summarize the conversation, transfer context, and set appropriate expectations.</p>
+
+        <h2>5. Monitor, Measure, Iterate</h2>
+        <p>Track the right metrics:</p>
+
+        <p><strong>Operational:</strong> Response time (p50, p95, p99), token usage, error rates, escalation rate.</p>
+        <p><strong>Quality:</strong> CSAT/NPS, task completion rate, first-contact resolution rate.</p>
+
+        <p><strong>Real-world example:</strong> We noticed a 15% drop in task completion for "password reset" requests. Investigation revealed the Agent was too verbose — users abandoned before getting to the reset link. Streamlined response, completion rates recovered.</p>
+
+        <h2>Common Anti-Patterns to Avoid</h2>
+
+        <ul>
+          <li><strong>The "Omniscient" Agent:</strong> One Agent that does everything. Better: Specialized Agents with a router.</li>
+          <li><strong>Prompt Engineering Over-Reliance:</strong> Spending weeks tweaking prompts. Better: Invest in tool design and evaluation frameworks.</li>
+          <li><strong>Ignoring Latency:</strong> Accepting 10+ second responses. Better: Optimize context, implement streaming.</li>
+          <li><strong>Neglecting Maintenance:</strong> Deploying and moving on. Better: Schedule regular reviews, monitor drift.</li>
+        </ul>
+
+        <h2>Bottom Line</h2>
+        <p>Building production-ready UiPath Agents is as much about operational discipline as technical implementation. The teams that succeed treat Agents as products, not experiments — with clear requirements, robust testing, continuous monitoring, and ongoing refinement.</p>
+
+        <p>The best Agents I've built weren't the ones with the most sophisticated prompts. They were the ones that solved real problems reliably, learned from their mistakes, and earned user trust through consistent, helpful interactions.</p>
+
+        <p><strong>Start simple. Measure everything. Iterate relentlessly.</strong></p>
+      `
+    }
   ]
 };
 
