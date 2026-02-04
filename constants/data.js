@@ -822,61 +822,213 @@ const userData = {
       category: "AI Engineering",
       tags: ["AgenticAI", "LLM", "ProductionML", "Anthropic"],
       content: `
-        <p>I've spent the last year watching enterprise teams ship (and fail to ship) AI agents. The pattern is predictable: start with LangChain, hit a wall, rip it out, rebuild with raw APIs.</p>
+        <p class="lead">I've spent the last year watching enterprise teams ship (and fail to ship) AI agents. The pattern is predictable: start with LangChain, hit a wall, rip it out, rebuild with raw APIs.</p>
 
-        <p>Anthropic's recent engineering post validates what I've seen in the field. After working with dozens of teams building production agents, they identified five composable patterns that actually work. No frameworks. No magic. Just patterns.</p>
+        <p>Anthropic's recent engineering post validates what I've seen in the field. After working with dozens of teams building production agents, they identified <strong>five composable patterns</strong> that actually work. No frameworks. No magic. Just patterns.</p>
+
+        <p>Here's what they found — with examples from my own implementations.</p>
+
+        <hr>
 
         <h2>Pattern 1: Prompt Chaining</h2>
-        <p><strong>When the task decomposes cleanly into fixed steps.</strong></p>
+        
+        <p class="pattern-subtitle">When the task decomposes cleanly into fixed steps</p>
+
         <p>Break a task into sequential LLM calls, where each step processes the output of the previous one. Add programmatic "gates" between steps to verify progress.</p>
 
-        <p><strong>Real example:</strong> I built a compliance document generator for a healthcare client. The flow: generate outline → gate check → expand content → gate check → format document. Each step is a separate LLM call. If a gate fails, we retry that step with feedback. Result: 94% accuracy (vs. 67% with a single prompt) at ~8 seconds latency.</p>
+        <h3>Real Example: Healthcare Compliance Generator</h3>
+        
+        <p>I built this for a healthcare client to generate compliance documents. The flow looks like this:</p>
 
-        <p><em>The trap:</em> Don't chain just because you can. If steps aren't truly dependent, you're adding latency for no benefit.</p>
+        <ol>
+          <li><strong>Step 1:</strong> Generate outline based on regulation type</li>
+          <li><strong>Gate:</strong> Check outline covers all required sections</li>
+          <li><strong>Step 2:</strong> Expand each section into draft content</li>
+          <li><strong>Gate:</strong> Check word count and reading level</li>
+          <li><strong>Step 3:</strong> Convert to final formatted document</li>
+        </ol>
+
+        <p>Each step is a separate LLM call. If a gate fails, we retry that step with feedback.</p>
+
+        <div class="result-box">
+          <strong>Results:</strong> 94% accuracy (vs. 67% with a single prompt) at ~8 seconds latency
+        </div>
+
+        <div class="warning-box">
+          <strong>⚠️ The Trap:</strong> Don't chain just because you can. If steps aren't truly dependent, you're adding latency for no benefit.
+        </div>
+
+        <hr>
 
         <h2>Pattern 2: Routing</h2>
-        <p><strong>When inputs need different handling strategies.</strong></p>
+        
+        <p class="pattern-subtitle">When inputs need different handling strategies</p>
+
         <p>A classifier routes inputs to specialized downstream handlers. This works well when you have clear input categories with different requirements.</p>
 
-        <p><strong>Real example:</strong> Customer support ticket routing. Simple questions go to Claude Haiku for fast, cheap responses. Complex technical issues go to Claude Sonnet with debugging tools. Refund requests escalate to humans. Result: 60% of tickets now handled by Haiku at 1/10th the cost.</p>
+        <h3>Real Example: Customer Support Ticket Routing</h3>
+        
+        <p>Here's how we classified and routed tickets for a SaaS company:</p>
 
-        <p><em>Key insight:</em> Your router doesn't need to be perfect. A "confident" wrong route beats a hesitant correct one — you can always escalate.</p>
+        <div class="example-flow">
+          <div class="flow-item">
+            <strong>"How do I reset my password?"</strong>
+            <span>→ Claude Haiku (fast, cheap)</span>
+          </div>
+          <div class="flow-item">
+            <strong>"My integration is returning 403s..."</strong>
+            <span>→ Claude Sonnet + debugging tools</span>
+          </div>
+          <div class="flow-item">
+            <strong>"I want a refund"</strong>
+            <span>→ Human escalation</span>
+          </div>
+        </div>
+
+        <div class="result-box">
+          <strong>Impact:</strong> 60% of tickets now handled by Haiku at 1/10th the cost
+        </div>
+
+        <div class="insight-box">
+          <strong>💡 Key Insight:</strong> Your router doesn't need to be perfect. A "confident" wrong route beats a hesitant correct one — you can always escalate.
+        </div>
+
+        <hr>
 
         <h2>Pattern 3: Parallelization</h2>
-        <p><strong>When you need speed or multiple perspectives.</strong></p>
-        <p>Two variants: <strong>Sectioning</strong> (break into independent subtasks, run in parallel) and <strong>Voting</strong> (run same task multiple times, aggregate results).</p>
+        
+        <p class="pattern-subtitle">When you need speed or multiple perspectives</p>
 
-        <p><strong>Real example — Sectioning:</strong> Financial advice agent with safety guardrails. Parallel Call 1 generates response to user query. Parallel Call 2 screens for disallowed content. Both run simultaneously. If Call 2 flags anything, we block the response. Latency increase: only ~200ms.</p>
+        <p>Two variants:</p>
 
-        <p><strong>Real example — Voting:</strong> Code security scanner. Run 3 different SQL injection checks with different prompt angles. Flag if 2+ runs agree. Cost: 3x. Value: Prevents the one exploit that gets through.</p>
+        <ul>
+          <li><strong>Sectioning:</strong> Break into independent subtasks, run in parallel</li>
+          <li><strong>Voting:</strong> Run same task multiple times, aggregate results</li>
+        </ul>
+
+        <h3>Example: Safety Guardrails (Sectioning)</h3>
+        
+        <p>I implemented this for a financial advice agent:</p>
+
+        <pre><code>Parallel Call 1: Generate response to user query
+Parallel Call 2: Screen for disallowed content
+
+Both run simultaneously.
+If Call 2 flags anything → block the response</code></pre>
+
+        <div class="result-box">
+          <strong>Latency increase:</strong> Only ~200ms
+        </div>
+
+        <h3>Example: Code Security Scanner (Voting)</h3>
+
+        <pre><code>Run 1: Check for SQL injection (pattern A)
+Run 2: Check for SQL injection (pattern B)  
+Run 3: Check for SQL injection (pattern C)
+
+Flag if 2+ runs agree</code></pre>
+
+        <div class="result-box">
+          <strong>Cost:</strong> 3x | <strong>Value:</strong> Prevents the one exploit that gets through
+        </div>
+
+        <div class="warning-box">
+          <strong>⚠️ When NOT to use:</strong> Don't parallelize if subtasks aren't truly independent. Dependencies create coordination headaches.
+        </div>
+
+        <hr>
 
         <h2>Pattern 4: Orchestrator-Workers</h2>
-        <p><strong>When you can't predict the subtasks upfront.</strong></p>
+        
+        <p class="pattern-subtitle">When you can't predict the subtasks upfront</p>
+
         <p>A central "orchestrator" LLM dynamically breaks down tasks, delegates to worker LLMs, and synthesizes results. Workers aren't predefined — the orchestrator decides what's needed based on the specific input.</p>
 
-        <p><strong>Real example:</strong> Codebase migration tool that needed to update API calls across 50+ files. The orchestrator scans the repository, identifies files with Stripe imports, then delegates to workers for each file (read, identify patterns, generate replacements, write changes). Finally verifies compilation and runs tests.</p>
+        <h3>Real Example: Codebase Migration Tool</h3>
+        
+        <p>Needed to update Stripe API calls across 50+ files:</p>
 
-        <p><em>The risk:</em> This is the most complex pattern. Start with simpler approaches and graduate here only when you genuinely can't predict the workflow.</p>
+        <pre><code>Orchestrator: "Update all Stripe API v1 calls to v2"
+  ↓
+Step 1: Scan repo, identify files with Stripe imports
+  ↓
+Step 2: For EACH file, delegate to worker:
+        - Read file
+        - Identify v1 patterns
+        - Generate v2 replacement
+        - Write changes
+  ↓
+Step 3: Verify all changes compile
+Step 4: Run test suite</code></pre>
+
+        <p>The orchestrator doesn't know upfront which files need changes. Workers discover and execute dynamically.</p>
+
+        <div class="warning-box">
+          <strong>⚠️ The Risk:</strong> This is the most complex pattern. Start with simpler approaches and graduate here only when you genuinely can't predict the workflow.
+        </div>
+
+        <hr>
 
         <h2>Pattern 5: Evaluator-Optimizer</h2>
-        <p><strong>When iterative refinement provides measurable value.</strong></p>
+        
+        <p class="pattern-subtitle">When iterative refinement provides measurable value</p>
+
         <p>One LLM generates, another evaluates, in a loop. Continue until quality threshold met or max iterations reached.</p>
 
-        <p><strong>Real example:</strong> Marketing copy generation. Generate headline options → evaluate on brand voice, clarity, CTA strength → if score < 8/10, provide specific feedback and regenerate. Repeat up to 3 iterations.</p>
+        <h3>Real Example: Marketing Copy Generation</h3>
 
-        <p><em>The metric that matters:</em> If you can't define "better" quantitatively, this pattern won't help. You need evaluation criteria sharper than "make it good."</p>
+        <pre><code>Loop (max 3 iterations):
+  1. Generate: Write headline options
+  2. Evaluate: Score on brand voice, clarity, CTA strength
+  3. If score < 8/10:
+       Provide feedback → regenerate
+  4. Else: Done</code></pre>
+
+        <p>The evaluator is explicit: <em>"This headline is too technical. Simplify for C-level audience."</em> The generator incorporates that feedback.</p>
+
+        <div class="insight-box">
+          <strong>💡 The Metric That Matters:</strong> If you can't define "better" quantitatively, this pattern won't help. You need evaluation criteria sharper than "make it good."
+        </div>
+
+        <hr>
 
         <h2>The Meta-Pattern: Start Simple</h2>
-        <p>Anthropic's core advice (and mine): Begin with a single LLM call. Add retrieval. Add in-context examples. Only when that fails, add one of these patterns. And only when that fails, consider full agents.</p>
 
-        <p>Instrument everything from day one. You can't improve what you don't measure. Every pattern should have latency tracking, success/failure rates, cost per task, and human validation samples.</p>
+        <p>Anthropic's core advice (and mine):</p>
+
+        <ol>
+          <li>Begin with a single LLM call</li>
+          <li>Add retrieval</li>
+          <li>Add in-context examples</li>
+          <li>Only when that fails, add one of these patterns</li>
+          <li>Only when that fails, consider full agents</li>
+        </ol>
+
+        <h3>Instrument Everything</h3>
+
+        <p>You can't improve what you don't measure. Every pattern should track:</p>
+
+        <ul>
+          <li>Latency (p50, p95, p99)</li>
+          <li>Success/failure rates by step</li>
+          <li>Cost per task</li>
+          <li>Human validation samples</li>
+        </ul>
+
+        <hr>
 
         <h2>Frameworks: Use With Eyes Open</h2>
+
         <p>LangChain, CrewAI, LlamaIndex — they make demos fast. But successful production teams often <strong>reduce</strong> abstraction, not add it.</p>
 
-        <p>My rule: Use a framework for the 20% of boilerplate it handles well (tool calling, retries, parsing). Build the 80% that's unique to your problem yourself. You'll debug faster and understand your system.</p>
+        <div class="insight-box">
+          <strong>💡 My Rule:</strong> Use a framework for the 20% of boilerplate it handles well (tool calling, retries, parsing). Build the 80% that's unique to your problem yourself. You'll debug faster and understand your system.
+        </div>
+
+        <hr>
 
         <h2>Bottom Line</h2>
+
         <p>Agents aren't magic. They're software with more moving parts. These five patterns are composable building blocks — mix, match, customize for your use case.</p>
 
         <p>The teams shipping production agents aren't the ones with the fanciest architectures. They're the ones that <strong>measure, iterate, and resist complexity until it's justified.</strong></p>
@@ -890,81 +1042,178 @@ const userData = {
       category: "RPA & Automation",
       tags: ["UiPath", "AgenticAI", "RPA", "EnterpriseAutomation"],
       content: `
-        <p>I've spent the last 18 months building UiPath Agents for enterprise clients — from quick POCs to production systems handling thousands of daily interactions. Along the way, I've learned what works, what breaks, and what separates demo-worthy experiments from systems that actually deliver business value.</p>
+        <p class="lead">I've spent the last 18 months building UiPath Agents for enterprise clients — from quick POCs to production systems handling thousands of daily interactions. Along the way, I've learned what works, what breaks, and what separates demo-worthy experiments from systems that actually deliver business value.</p>
 
         <p>UiPath Agents represent a significant shift in how we think about automation. Unlike traditional RPA bots that follow rigid, pre-defined workflows, Agents leverage large language models to understand context, make decisions, and take actions dynamically.</p>
 
+        <hr>
+
         <h2>1. Design Your Agent's "Personality" Deliberately</h2>
+
         <p>Your Agent isn't just a tool — it's a digital employee representing your brand. Define clear behavioral guidelines:</p>
+
         <ul>
           <li>How formal or casual should the Agent be?</li>
           <li>Should it apologize when it makes mistakes, or simply correct them?</li>
           <li>What tone is appropriate for your industry?</li>
         </ul>
 
-        <p>I document this in a "Persona Specification" alongside technical docs. For a healthcare client: "Professional but warm. Never make medical claims. Always defer to human providers for clinical decisions."</p>
+        <p>I document this in a "Persona Specification" alongside technical docs. For a healthcare client: <em>"Professional but warm. Never make medical claims. Always defer to human providers for clinical decisions."</em></p>
+
+        <hr>
 
         <h2>2. Master the Context Window</h2>
+
         <p>Context isn't free — every token costs latency and money. The art is providing exactly what the Agent needs, nothing more.</p>
 
-        <p><strong>Best practices:</strong></p>
+        <h3>Best Practices</h3>
+
         <ul>
-          <li>Full context for the last 5 turns</li>
-          <li>Summarized context for earlier conversation</li>
-          <li>Key facts extracted and stored separately</li>
+          <li><strong>Full context:</strong> Last 5 conversation turns</li>
+          <li><strong>Summarized context:</strong> Earlier conversation history</li>
+          <li><strong>Extracted facts:</strong> Key information stored separately</li>
         </ul>
 
-        <p><strong>Real-world impact:</strong> One client's Agent consumed 8,000 tokens per request. After optimizing context management: 2,500 tokens — <strong>cutting costs by 70%</strong> and improving response times by 40%.</p>
+        <div class="result-box">
+          <strong>Real-world impact:</strong> One client's Agent consumed 8,000 tokens per request. After optimizing: 2,500 tokens — <strong>cutting costs by 70%</strong> and improving response times by 40%.
+        </div>
+
+        <hr>
 
         <h2>3. Build Robust Tool Design</h2>
-        <p>Tools are how your Agent interacts with the world. Poorly designed tools are the #1 source of Agent failures in production.</p>
 
-        <p><strong>Naming:</strong> Prefer <code>get_customer_order_history</code> over <code>query_database_table_orders</code>.</p>
+        <p>Tools are how your Agent interacts with the world. Poorly designed tools are the <strong>#1 source of Agent failures</strong> in production.</p>
 
-        <p><strong>Error handling:</strong> Every tool call can fail. Build retry logic and graceful degradation:</p>
+        <h3>Naming Conventions</h3>
+
+        <p>Prefer descriptive names:</p>
+
+        <div class="comparison">
+          <div class="bad">❌ <code>query_database_table_orders</code></div>
+          <div class="good">✅ <code>get_customer_order_history</code></div>
+        </div>
+
+        <h3>Error Handling</h3>
+
+        <p>Every tool call can fail. Build retry logic and graceful degradation:</p>
 
         <pre><code>try:
     result = create_ticket(user_id, description)
-    return {"success": True, "ticket_id": result.id}
+    return {
+        "success": True, 
+        "ticket_id": result.id
+    }
 except InsufficientPermissionsError:
-    return {"success": False, "error": "I don't have permission..."}
+    return {
+        "success": False, 
+        "error": "I don't have permission to create tickets for your account type."
+    }
 except RateLimitError:
-    return {"success": False, "error": "I'm experiencing high traffic..."}</code></pre>
+    return {
+        "success": False, 
+        "error": "I'm experiencing high traffic right now. Please try again in a moment."
+    }</code></pre>
+
+        <div class="insight-box">
+          <strong>💡 Pro Tip:</strong> Always return structured responses. Never return raw exceptions to the LLM.
+        </div>
+
+        <hr>
 
         <h2>4. Implement Human-in-the-Loop Smartly</h2>
+
         <p>The goal is strategic human involvement — only when necessary, but always when critical.</p>
 
-        <p><strong>Escalation criteria:</strong></p>
+        <h3>Escalation Criteria</h3>
+
         <ul>
-          <li>High-stakes decisions (cancellations, refunds over $X)</li>
-          <li>Situations requiring empathy</li>
-          <li>Edge cases the Agent hasn't been trained on</li>
-          <li>User explicitly requests a human</li>
+          <li>✅ High-stakes decisions (cancellations, refunds over $X)</li>
+          <li>✅ Situations requiring empathy</li>
+          <li>✅ Edge cases the Agent hasn't been trained on</li>
+          <li>✅ User explicitly requests a human</li>
         </ul>
 
-        <p>When escalating, the Agent should acknowledge the handoff, summarize the conversation, transfer context, and set appropriate expectations.</p>
+        <h3>The Escalation Flow</h3>
+
+        <p>When escalating, the Agent should:</p>
+
+        <ol>
+          <li>Acknowledge the handoff</li>
+          <li>Summarize the conversation</li>
+          <li>Transfer context</li>
+          <li>Set appropriate expectations</li>
+        </ol>
+
+        <hr>
 
         <h2>5. Monitor, Measure, Iterate</h2>
+
         <p>Track the right metrics:</p>
 
-        <p><strong>Operational:</strong> Response time (p50, p95, p99), token usage, error rates, escalation rate.</p>
-        <p><strong>Quality:</strong> CSAT/NPS, task completion rate, first-contact resolution rate.</p>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <strong>Operational</strong>
+            <ul>
+              <li>Response time (p50, p95, p99)</li>
+              <li>Token usage</li>
+              <li>Error rates</li>
+              <li>Escalation rate</li>
+            </ul>
+          </div>
+          <div class="metric-card">
+            <strong>Quality</strong>
+            <ul>
+              <li>CSAT/NPS</li>
+              <li>Task completion rate</li>
+              <li>First-contact resolution</li>
+            </ul>
+          </div>
+        </div>
 
-        <p><strong>Real-world example:</strong> We noticed a 15% drop in task completion for "password reset" requests. Investigation revealed the Agent was too verbose — users abandoned before getting to the reset link. Streamlined response, completion rates recovered.</p>
+        <div class="result-box">
+          <strong>Real-world example:</strong> We noticed a 15% drop in task completion for "password reset" requests. Investigation revealed the Agent was too verbose — users abandoned before getting to the reset link. Streamlined response, completion rates recovered.
+        </div>
+
+        <hr>
 
         <h2>Common Anti-Patterns to Avoid</h2>
 
-        <ul>
-          <li><strong>The "Omniscient" Agent:</strong> One Agent that does everything. Better: Specialized Agents with a router.</li>
-          <li><strong>Prompt Engineering Over-Reliance:</strong> Spending weeks tweaking prompts. Better: Invest in tool design and evaluation frameworks.</li>
-          <li><strong>Ignoring Latency:</strong> Accepting 10+ second responses. Better: Optimize context, implement streaming.</li>
-          <li><strong>Neglecting Maintenance:</strong> Deploying and moving on. Better: Schedule regular reviews, monitor drift.</li>
-        </ul>
+        <div class="antipattern">
+          <h4>❌ The "Omniscient" Agent</h4>
+          <p>Trying to build one Agent that does everything.</p>
+          <p><strong>Better:</strong> Specialized Agents with a router.</p>
+        </div>
+
+        <div class="antipattern">
+          <h4>❌ Prompt Engineering Over-Reliance</h4>
+          <p>Spending weeks tweaking prompts instead of fixing architecture.</p>
+          <p><strong>Better:</strong> Invest in tool design and evaluation frameworks.</p>
+        </div>
+
+        <div class="antipattern">
+          <h4>❌ Ignoring Latency</h4>
+          <p>Accepting 10+ second response times.</p>
+          <p><strong>Better:</strong> Optimize context, implement streaming.</p>
+        </div>
+
+        <div class="antipattern">
+          <h4>❌ Neglecting Maintenance</h4>
+          <p>Deploying the Agent and moving on.</p>
+          <p><strong>Better:</strong> Schedule regular reviews, monitor drift.</p>
+        </div>
+
+        <hr>
 
         <h2>Bottom Line</h2>
-        <p>Building production-ready UiPath Agents is as much about operational discipline as technical implementation. The teams that succeed treat Agents as products, not experiments — with clear requirements, robust testing, continuous monitoring, and ongoing refinement.</p>
+
+        <p>Building production-ready UiPath Agents is as much about operational discipline as technical implementation. The teams that succeed treat Agents as <strong>products, not experiments</strong> — with clear requirements, robust testing, continuous monitoring, and ongoing refinement.</p>
 
         <p>The best Agents I've built weren't the ones with the most sophisticated prompts. They were the ones that solved real problems reliably, learned from their mistakes, and earned user trust through consistent, helpful interactions.</p>
+
+        <div class="final-cta">
+          <strong>Start simple. Measure everything. Iterate relentlessly.</strong>
+        </div>
+      `
 
         <p><strong>Start simple. Measure everything. Iterate relentlessly.</strong></p>
       `
