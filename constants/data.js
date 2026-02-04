@@ -672,6 +672,337 @@
   ],
   blogs: [
     {
+      slug: "multi-agent-orchestration-enterprise",
+      title: "Multi-Agent Orchestration: The Architecture Behind Scalable Enterprise Automation",
+      excerpt: "How to design, deploy, and manage multi-agent systems that handle complex enterprise workflows across departments without chaos.",
+      date: "February 4, 2026",
+      category: "Agentic AI Architecture",
+      tags: ["MultiAgent", "Orchestration", "EnterpriseAI", "UiPath", "Architecture"],
+      content: `
+        <p class="lead">Last quarter, I architected a multi-agent system for a Fortune 500 financial services firm. Three agents—one for document extraction, one for compliance checking, and one for customer notifications—needed to coordinate on 10,000+ daily mortgage applications. The challenge wasn't building the agents. It was orchestrating them without creating a distributed nightmare.</p>
+
+        <p>Single agents are easy. Multi-agent systems are where enterprise automation gets interesting—and dangerous. Get the architecture wrong, and you end up with agents talking past each other, duplicate work, race conditions, and a debugging hell that makes microservices look simple.</p>
+
+        <p>Here's what I've learned building multi-agent orchestration systems that actually scale.</p>
+
+        <hr>
+
+        <h2>When You Actually Need Multiple Agents</h2>
+
+        <p>Don't start with multi-agent. Start with one agent that uses good tools. Only graduate to multi-agent when you hit one of these walls:</p>
+
+        <ul>
+          <li><strong>Domain expertise boundaries:</strong> Your healthcare billing agent shouldn't also handle HIPAA compliance interpretation</li>
+          <li><strong>Security isolation:</strong> The agent accessing customer PII shouldn't be the same one calling third-party APIs</li>
+          <li><strong>Load patterns:</strong> One component needs 10x the compute of others</li>
+          <li><strong>Team ownership:</strong> Different teams maintain different capabilities</li>
+        </ul>
+
+        <div class="warning-box">
+          <strong>⚠️ The Trap:</strong> Teams often split agents prematurely because it "feels cleaner." Every agent boundary adds coordination overhead. Make sure the separation pays for itself.
+        </div>
+
+        <hr>
+
+        <h2>The Three Orchestration Patterns That Work</h2>
+
+        <h3>Pattern 1: Hub-and-Spoke (Centralized)</h3>
+
+        <p>One orchestrator agent coordinates multiple specialized worker agents. The orchestrator understands the overall goal and delegates subtasks.</p>
+
+        <h4>When to Use</h4>
+        <ul>
+          <li>Workflow has clear sequential dependencies</li>
+          <li>You need centralized visibility and control</li>
+          <li>Worker agents are truly stateless</li>
+        </ul>
+
+        <h4>Real Implementation: Claims Processing</h4>
+
+        <pre><code>Orchestrator: "Process this auto insurance claim"
+  ↓
+Step 1: Delegate to DocumentAgent
+        → Extract damage photos, police report, estimate
+  ↓
+Step 2: Delegate to FraudDetectionAgent  
+        → Analyze patterns, flag anomalies
+  ↓
+Step 3: Delegate to PolicyAgent
+        → Verify coverage, calculate payout
+  ↓
+Step 4: Delegate to NotificationAgent
+        → Generate customer communication
+  ↓
+Orchestrator: Compile final decision package</code></pre>
+
+        <div class="result-box">
+          <strong>Latency:</strong> 12-15 seconds end-to-end | <strong>Success rate:</strong> 94% autonomous completion
+        </div>
+
+        <h3>Pattern 2: Pub/Sub (Event-Driven)</h3>
+
+        <p>Agents communicate through an event bus. Each agent subscribes to relevant events and publishes results. No central coordinator.</p>
+
+        <h4>When to Use</h4>
+        <ul>
+          <li>High throughput with loose coupling requirements</li>
+          <li>Agents need to react to changes in real-time</li>
+          <li>You want to add/remove agents without changing others</li>
+        </ul>
+
+        <h4>Real Implementation: Supply Chain Monitoring</h4>
+
+        <pre><code>Event: "Shipment delayed at Port of Long Beach"
+  ↓
+InventoryAgent: Publishes "Stock risk: SKU-2847"
+  ↓
+SalesAgent: Subscribes → Publishes "Backorder notification needed"
+  ↓
+CustomerAgent: Subscribes → Generates proactive customer emails
+  ↓
+FinanceAgent: Subscribes → Updates revenue forecast</code></pre>
+
+        <div class="insight-box">
+          <strong>💡 Key Insight:</strong> Event-driven multi-agent systems scale better but are harder to debug. Invest in distributed tracing from day one.
+        </div>
+
+        <h3>Pattern 3: Federated (Hierarchical)</h3>
+
+        <p>Multiple semi-autonomous agent groups, each with their own orchestrator, coordinated by a higher-level meta-orchestrator.</p>
+
+        <h4>When to Use</h4>
+        <ul>
+          <li>Enterprise-wide automation spanning multiple departments</li>
+          <li>Different teams own different agent clusters</li>
+          <li>You need both autonomy and coordination</li>
+        </ul>
+
+        <h4>Real Implementation: Enterprise Onboarding</h4>
+
+        <pre><code>Meta-Orchestrator: "Onboard new employee Sarah Chen"
+  ↓
+ITCluster:
+  - Agent: Create accounts (AD, Slack, GitHub)
+  - Agent: Provision laptop and peripherals
+  - Agent: Set up VPN and security
+  
+HRCluster:
+  - Agent: Enroll in benefits
+  - Agent: Schedule orientation
+  - Agent: Assign buddy/mentor
+  
+FacilitiesCluster:
+  - Agent: Assign desk
+  - Agent: Configure access badges
+  - Agent: Order welcome kit</code></pre>
+
+        <div class="result-box">
+          <strong>Before:</strong> 47 manual tasks, 5 departments, 2+ weeks | <strong>After:</strong> 4 hours average, zero manual coordination
+        </div>
+
+        <hr>
+
+        <h2>Critical Design Decisions</h2>
+
+        <h3>1. Communication Protocol</h3>
+
+        <p>Agents need a shared language. I use structured JSON with these fields:</p>
+
+        <pre><code>{
+  "message_id": "uuid",
+  "correlation_id": "workflow-uuid",  // Ties all messages in a flow together
+  "sender": "agent-name",
+  "recipient": "agent-name|broadcast",
+  "message_type": "request|response|event|error",
+  "payload": { ... },
+  "timestamp": "ISO8601",
+  "ttl": 300  // Message expires after 5 minutes
+}</code></pre>
+
+        <div class="warning-box">
+          <strong>⚠️ Don't:</strong> Let agents send free-form text to each other. You'll get "misunderstandings" that are impossible to debug.
+        </div>
+
+        <h3>2. State Management</h3>
+
+        <p>Where does workflow state live?</p>
+
+        <table>
+          <tr>
+            <th>Approach</th>
+            <th>Best For</th>
+            <th>Risk</th>
+          </tr>
+          <tr>
+            <td>Orchestrator holds state</td>
+            <td>Hub-and-spoke, short flows</td>
+            <td>Orchestrator becomes bottleneck</td>
+          </tr>
+          <tr>
+            <td>External state store (Redis)</td>
+            <td>Long-running flows, high scale</td>
+            <td>Complexity, consistency issues</td>
+          </tr>
+          <tr>
+            <td>Event sourcing (log as state)</td>
+            <td>Audit requirements, replay needs</td>
+            <td>Storage costs, query complexity</td>
+          </tr>
+        </table>
+
+        <p>For most enterprise scenarios, I use Redis with TTL and periodic checkpointing to a durable store.</p>
+
+        <h3>3. Failure Handling</h3>
+
+        <p>Multi-agent failures cascade. Design for it:</p>
+
+        <ul>
+          <li><strong>Timeouts:</strong> Every inter-agent call has a max wait (usually 30s)</li>
+          <li><strong>Circuit breakers:</strong> After 3 failures, route around the failing agent</li>
+          <li><strong>Compensating transactions:</strong> If Step 5 fails, undo Steps 1-4</li>
+          <li><strong>Human escalation:</strong> Some failures need human judgment</li>
+        </ul>
+
+        <h4>Saga Pattern for Distributed Transactions</h4>
+
+        <pre><code>Step 1: Reserve inventory
+Step 2: Charge payment
+Step 3: Create shipment
+
+If Step 3 fails:
+  → Compensate Step 2: Refund payment
+  → Compensate Step 1: Release inventory
+  → Escalate to human for investigation</code></pre>
+
+        <hr>
+
+        <h2>Monitoring Multi-Agent Systems</h2>
+
+        <p>You need visibility at multiple levels:</p>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <strong>Agent Level</strong>
+            <ul>
+              <li>Requests received/sent</li>
+              <li>Average processing time</li>
+              <li>Error rate by agent</li>
+              <li>Token usage per agent</li>
+            </ul>
+          </div>
+          <div class="metric-card">
+            <strong>Workflow Level</strong>
+            <ul>
+              <li>End-to-end latency</li>
+              <li>Completion rate</li>
+              <li>Escalation rate</li>
+              <li>Agent handoff count</li>
+            </ul>
+          </div>
+          <div class="metric-card">
+            <strong>System Level</strong>
+            <ul>
+              <li>Message queue depth</li>
+              <li>State store latency</li>
+              <li>Concurrent workflows</li>
+              <li>Resource utilization</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <strong>💡 Essential:</strong> Distributed tracing. Every message should carry a trace ID. When something breaks at 2 AM, you need to reconstruct exactly which agent said what to whom.
+        </div>
+
+        <hr>
+
+        <h2>UiPath-Specific Considerations</h2>
+
+        <p>If you're building on UiPath, you have some powerful tools and some constraints:</p>
+
+        <h3>Use UiPath Orchestrator for</h3>
+        <ul>
+          <li>Workflow scheduling and queuing</li>
+          <li>Credential management (never hardcode in agents)</li>
+          <li>Audit logging and compliance reporting</li>
+          <li>Agent versioning and deployment</li>
+        </ul>
+
+        <h3>Use UiPath Apps + Agent Builder for</h3>
+        <ul>
+          <li>Human-in-the-loop interfaces</li>
+          <li>Exception handling workflows</li>
+          <li>Business user monitoring dashboards</li>
+        </ul>
+
+        <h3>Integration Pattern</h3>
+
+        <pre><code>UiPath Agent (Agent Builder)
+  ↓ Calls
+Custom Orchestration Service (Azure Functions)
+  ↓ Coordinates
+Specialized Agents (Azure/OpenAI/Anthropic)
+  ↓ Uses
+UiPath Robots (for legacy system integration)
+  ↓ Updates
+Line-of-Business Systems (SAP, Salesforce, etc.)</code></pre>
+
+        <hr>
+
+        <h2>Anti-Patterns That Will Kill You</h2>
+
+        <div class="antipattern">
+          <h4>❌ The Chatty Agent</h4>
+          <p>Agents that send 20 messages back and forth for a simple task. Every message boundary is latency and cost. Batch where possible.</p>
+        </div>
+
+        <div class="antipattern">
+          <h4>❌ Distributed Monolith</h4>
+          <p>Agents so tightly coupled they can't be deployed independently. If changing Agent A requires changing Agent B, you have a distributed monolith.</p>
+        </div>
+
+        <div class="antipattern">
+          <h4>❌ Implicit Contracts</h4>
+          <p>Agent A assumes Agent B returns data in a certain format. Use explicit schemas and validation.</p>
+        </div>
+
+        <div class="antipattern">
+          <h4>❌ Infinite Loops</h4>
+          <p>Agent A asks Agent B, which asks Agent A. Always include TTLs and cycle detection.</p>
+        </div>
+
+        <hr>
+
+        <h2>Getting Started: The 4-Week Roadmap</h2>
+
+        <h3>Week 1: Single Agent, Multiple Tools</h3>
+        <p>Build one agent with excellent tool design. Master context management and error handling.</p>
+
+        <h3>Week 2: Extract Specialized Capabilities</h3>
+        <p>Identify one tool that's complex enough to become its own agent. Extract it. Implement hub-and-spoke.</p>
+
+        <h3>Week 3: Add Real Orchestration</h3>
+        <p>Implement proper state management, distributed tracing, and failure handling.</p>
+
+        <h3>Week 4: Production Hardening</h3>
+        <p>Load testing, security review, monitoring dashboards, runbooks.</p>
+
+        <hr>
+
+        <h2>Bottom Line</h2>
+
+        <p>Multi-agent orchestration isn't about building cool AI systems—it's about solving real business problems that are too complex for single agents. The architecture matters. The coordination patterns matter. The monitoring and failure handling matter.</p>
+
+        <p>The teams that succeed approach multi-agent systems the same way they'd approach any distributed system: with clear interfaces, explicit contracts, comprehensive testing, and ruthless operational discipline.</p>
+
+        <p>Start simple. Add agents only when the complexity pays for itself. And never forget: the goal isn't to have multiple agents. The goal is to deliver business value reliably at scale.</p>
+
+        <div class="final-cta">
+          <strong>Build the simplest thing that works. Then make it simpler.</strong>
+        </div>
+      `
+    },
+    {
       slug: "agentic-automation-patient-scheduling",
       title: "Unlocking Smarter Healthcare: How Agentic Automation Transforms Patient Scheduling",
       excerpt: "A summary of my Ashling article on how agentic automation improves patient scheduling and access.",
