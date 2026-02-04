@@ -42,19 +42,19 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8">
           <a
             href="/contact"
-            className="bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-3 rounded-full font-bold hover:from-blue-600 hover:to-purple-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
+            className="rounded-full bg-slate-900 px-8 py-3 text-center font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-xl"
           >
             Contact Me
           </a>
           <a
             href="/download"
-            className="bg-gradient-to-r from-emerald-500 to-teal-500 px-8 py-3 rounded-full font-bold hover:from-emerald-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
+            className="rounded-full border border-slate-200 bg-white px-8 py-3 text-center font-semibold text-slate-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
           >
-            📄 Download Presentation
+            Download Presentation
           </a>
           <a
             href="/about"
-            className="bg-white bg-opacity-20 backdrop-blur-lg px-8 py-3 rounded-full font-bold hover:bg-opacity-30 transition-all border border-white border-opacity-30 text-center"
+            className="rounded-full border border-transparent px-8 py-3 text-center font-semibold text-slate-600 transition-all hover:border-slate-200 hover:text-slate-900 dark:text-gray-300 dark:hover:border-gray-700 dark:hover:text-white"
           >
             Learn More
           </a>
@@ -63,7 +63,11 @@ export default function Hero() {
       {/* Image container */}
       <div className="hidden lg:block relative w-full md:w-1/2 -mr-40 mt-20">
         <div className="w-3/4 ">
-          <img src={userData.avatarUrl} alt="avatar" className=" shadow" />
+          <img
+            src={userData.avatarUrl}
+            alt={`Portrait of ${userData.name}`}
+            className="shadow"
+          />
           <div className="flex flex-row justify-between mt-4">
             <div className="flex flex-row space-x-4">
               <svg

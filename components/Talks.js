@@ -4,8 +4,8 @@ import React from "react";
 export default function Talks() {
   return (
     <section className="bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-        <h1 className=" text-5xl md:text-9xl font-bold py-25 text-center md:text-left">
+      <div className="max-w-6xl mx-auto h-32 bg-white dark:bg-gray-800">
+        <h1 className=" text-5xl md:text-6xl font-bold py-12 text-center md:text-left">
           ML/AI Talks
         </h1>
       </div>

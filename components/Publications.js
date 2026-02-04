@@ -4,13 +4,13 @@ import userData from "@constants/data";
 export default function Publications() {
   return (
     <section className="bg-white dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto h-48 bg-white dark:bg-gray-800">
-        <h1 className=" text-5xl md:text-9xl font-bold py-25 text-center md:text-left">
+      <div className="max-w-6xl mx-auto h-32 bg-white dark:bg-gray-800">
+        <h1 className=" text-5xl md:text-6xl font-bold py-12 text-center md:text-left">
           Publications
         </h1>
       </div>
       <div className="bg-[#F1F1F1] dark:bg-gray-900 px-4">
-        <div className="pt-10 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-20 gap-x-20">
+        <div className="pt-10 grid grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto gap-y-12 gap-x-12">
           {/* Social Buttons */}
           <div className="inline-flex flex-col">
             <div>

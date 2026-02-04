@@ -51,7 +51,7 @@ const userData = {
     title2:
       "I keep a side mission of simplifying topics about AI + AUTOMATION + HABITS + BOOKS.",
     currentPosition: "Solution Architect at Ashling Partners",
-    currentPositiontUrl: "https://ashlingpartners.com",
+    currentPositionUrl: "https://ashlingpartners.com",
   },
   bio: {
     description: [
@@ -136,7 +136,6 @@ const userData = {
   MediumUrl: "https://medium.com/@navaifanatic",
   BlogUrl: "http://projects.Naveenshah.com/blog/",
   socialLinks: {
-    instagram: "https://instagram.com/navaifanatic",
     twitter: "https://twitter.com/navaifanatic",
     linkedin: "https://linkedin.com/in/nchatlapalli",
     github: "https://github.com/ai-fanatic",
